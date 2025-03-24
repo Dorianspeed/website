@@ -1,0 +1,18 @@
+{
+  "importOrder": [
+    "^@/assets/(.*)$",
+    "^@/components/(.*)$",
+    "^@/constants/(.*)$",
+    "^@/styles/(.*)$",
+    "^@/types/(.*)$",
+    "^@/utils/(.*)$"
+  ],
+  "importOrderGroupNamespaceSpecifiers": true,
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "jsxSingleQuote": true,
+  "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
+  "printWidth": 100,
+  "singleQuote": true,
+  "trailingComma": "none"
+}
