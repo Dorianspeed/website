@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "circular-deps": "yarn madge --circular ./src --extensions ts,tsx ",
+    "dev": "next dev --turbopack",
+    "lint": "next lint",
+    "prepare": "husky",
+    "start": "next start"
   },
   "dependencies": {
     "next": "15.2.3",
@@ -14,6 +16,8 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
     "@eslint/compat": "^1.2.7",
     "@eslint/js": "^9.23.0",
     "@tailwindcss/postcss": "^4",
@@ -24,6 +28,9 @@
     "eslint": "^9.23.0",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^5.2.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "madge": "^8.0.0",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^4",
