@@ -1,0 +1,37 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    assignees:
+      - "Dorianspeed"
+    commit-message:
+      include: scope
+      prefix: "build"
+    directory: "/"
+    groups:
+      yarn-minor-and-patch:
+        applies-to: version-updates
+        update-types:
+          - patch
+          - minor
+    schedule:
+      interval: "daily"
+      time: "08:00"
+      timezone: "Europe/Paris"
+
+  - package-ecosystem: "github-actions"
+    assignees:
+      - "Dorianspeed"
+    commit-message:
+      include: scope
+      prefix: "build"
+    directory: "/"
+    groups:
+      actions-minor-and-patch:
+        applies-to: version-updates
+        update-types:
+          - patch
+          - minor
+    schedule:
+      interval: "daily"
+      time: "08:00"
+      timezone: "Europe/Paris"
