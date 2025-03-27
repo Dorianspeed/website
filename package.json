@@ -6,7 +6,6 @@
     "build": "next build",
     "circular-deps": "yarn madge --circular ./src --extensions ts,tsx ",
     "dev": "next dev --turbopack",
-    "lint": "next lint",
     "prepare": "husky",
     "start": "next start",
     "test": "vitest run",
