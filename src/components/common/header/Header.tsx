@@ -7,7 +7,7 @@ import { WEBSITE_URLS_DATA } from '@/constants/globals';
 
 import BurgerIcon from '@/assets/burger.svg';
 import CrossIcon from '@/assets/cross.svg';
-import SmileIcon from '@/assets/smile.svg';
+import LaptopIcon from '@/assets/laptop.svg';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <header className='border-primary-border relative justify-between border-b px-8 py-9 md:flex md:flex-row md:items-center'>
       <div className='h-10 w-10'>
-        <SmileIcon aria-hidden={true} data-testid='smile-icon' />
+        <LaptopIcon aria-hidden={true} data-testid='smile-icon' />
       </div>
       <nav aria-label='Main menu' role='navigation'>
         <button
