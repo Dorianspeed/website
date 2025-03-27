@@ -1,0 +1,39 @@
+name: PR Pipeline
+
+on: pull_request
+
+jobs:
+  build:
+    needs: circular-deps
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/install_deps
+      - name: Run build
+        run: yarn build
+
+  circular-deps:
+    needs: commitlint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/install_deps
+      - name: Check circular-deps
+        run: yarn circular-deps
+
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/install_deps
+      - name: Check conventionnal commits
+        run: yarn commitlint --from ${{ github.event.pull_request.base.sha }} --verbose
+
+  tests:
+    needs: circular-deps
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/install_deps
+      - name: Run tests
+        run: yarn test
