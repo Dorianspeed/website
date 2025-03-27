@@ -1,17 +1,13 @@
-import './globals.css';
 import type { Metadata } from 'next';
-import { Roboto, Roboto_Mono } from 'next/font/google';
+import { Noto_Sans } from 'next/font/google';
+
+import '@/styles/globals.css';
 
 import Header from '@/components/common/header/Header';
 
-const robotoSans = Roboto({
-  subsets: ['latin'],
-  variable: '--font-roboto-sans'
-});
-
-const robotoMono = Roboto_Mono({
-  subsets: ['latin'],
-  variable: '--font-roboto-mono'
+const notoSans = Noto_Sans({
+  display: 'swap',
+  subsets: ['latin']
 });
 
 export const metadata: Metadata = {
@@ -26,7 +22,7 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang='fr'>
-      <body className={`${robotoSans.variable} ${robotoMono.variable} antialiased`}>
+      <body className={`${notoSans.className} antialiased`}>
         <Header />
         {children}
       </body>

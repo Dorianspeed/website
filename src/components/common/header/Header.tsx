@@ -3,11 +3,11 @@
 import MenuItem from './menuItem/MenuItem';
 import { useState } from 'react';
 
+import { WEBSITE_URLS_DATA } from '@/constants/globals';
+
 import BurgerIcon from '@/assets/burger.svg';
 import CrossIcon from '@/assets/cross.svg';
 import SmileIcon from '@/assets/smile.svg';
-
-import { WEBSITE_URLS_DATA } from '@/constants/globals';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
