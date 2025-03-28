@@ -3,7 +3,7 @@
 import MenuItem from './menuItem/MenuItem';
 import { useState } from 'react';
 
-import { WEBSITE_URLS_DATA } from '@/constants/globals';
+import { MENU_ITEMS_DATA } from '@/constants/globals';
 
 import BurgerIcon from '@/assets/burger.svg';
 import CrossIcon from '@/assets/cross.svg';
@@ -12,7 +12,7 @@ import LaptopIcon from '@/assets/laptop.svg';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
-  const orderedUrlsData = [...WEBSITE_URLS_DATA].sort((a, b) => a.position - b.position);
+  const orderedMenuItemsData = [...MENU_ITEMS_DATA].sort((a, b) => a.position - b.position);
 
   return (
     <header className='border-primary-border relative justify-between border-b px-8 py-9 md:flex md:flex-row md:items-center'>
@@ -41,7 +41,7 @@ const Header = () => {
           className={`${isMenuOpen ? 'mt-16 flex flex-col' : 'hidden'} gap-2 md:flex md:flex-row md:items-center`}
           role='menubar'
         >
-          {orderedUrlsData.map((data) => (
+          {orderedMenuItemsData.map((data) => (
             <MenuItem key={data.url} {...data} />
           ))}
         </ul>
