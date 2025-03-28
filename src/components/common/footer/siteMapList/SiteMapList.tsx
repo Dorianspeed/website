@@ -1,6 +1,6 @@
 import type { FC, PropsWithChildren } from 'react';
 
-import { SiteMapNavList } from '@/types/globals';
+import type { SiteMapNavList } from '@/types/globals';
 
 import { SITE_MAP_NAV_LIST_LABELS } from '@/constants/globals';
 

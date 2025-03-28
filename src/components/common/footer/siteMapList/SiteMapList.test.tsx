@@ -1,4 +1,4 @@
-import SiteMapList, { SiteMapListProps } from './SiteMapList';
+import SiteMapList, { type SiteMapListProps } from './SiteMapList';
 import { render, screen } from '@testing-library/react';
 
 const siteMapListProps: SiteMapListProps = {

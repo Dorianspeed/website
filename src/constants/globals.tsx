@@ -1,4 +1,4 @@
-import { NavItemDataProps, SiteMapNavList, SocialMediaItemDataProps } from '@/types/globals';
+import type { NavItemDataProps, SiteMapNavList, SocialMediaItemDataProps } from '@/types/globals';
 
 import GithubIcon from '@/assets/github.svg';
 import LinkedinIcon from '@/assets/linkedin.svg';
