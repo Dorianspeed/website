@@ -1,11 +1,11 @@
 {
   "importOrder": [
-    "^@/assets/(.*)$",
-    "^@/components/(.*)$",
-    "^@/constants/(.*)$",
-    "^@/styles/(.*)$",
     "^@/types/(.*)$",
-    "^@/utils/(.*)$"
+    "^@/constants/(.*)$",
+    "^@/utils/(.*)$",
+    "^@/styles/(.*)$",
+    "^@/components/(.*)$",
+    "^@/assets/(.*)$"
   ],
   "importOrderGroupNamespaceSpecifiers": true,
   "importOrderSeparation": true,

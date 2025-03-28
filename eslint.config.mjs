@@ -5,15 +5,23 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import tsEslint from 'typescript-eslint';
 
 export default tsEslint.config(
-  {
-    ignores: ['**/.next/','**/postcss.config.mjs']
-  },
+  { ignores: ['**/.next/', '**/postcss.config.mjs'] },
   eslint.configs.recommended,
   ...tsEslint.configs.recommended,
   {
     plugins: { react, 'react-hooks': fixupPluginRules(reactHooks) },
     rules: {
       ...reactHooks.configs.recommended.rules,
+      '@typescript-eslint/array-type': ['error', { default: 'generic' }],
+      '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+      '@typescript-eslint/consistent-type-imports': [
+        'error',
+        {
+          disallowTypeAnnotations: true,
+          fixStyle: 'separate-type-imports',
+          prefer: 'type-imports'
+        }
+      ],
       '@typescript-eslint/no-unused-vars': [
         'error',
         { argsIgnorePattern: '^_', ignoreRestSiblings: true }

@@ -1,5 +1,5 @@
 import * as navigation from 'next/navigation';
-import MenuItem from './MenuItem';
+import SiteMapItem from './SiteMapItem';
 import { render, screen } from '@testing-library/react';
 
 import type { NavItemDataProps } from '@/types/globals';
@@ -9,15 +9,15 @@ vi.mock('next/navigation', async () => ({
   usePathname: () => '/'
 }));
 
-const menuItemProps: NavItemDataProps = {
+const siteMapItemProps: NavItemDataProps = {
   label: 'Accueil',
   position: 1,
   url: '/home'
 };
 
-describe('MenuItem', () => {
+describe('SiteMapItem', () => {
   it('should render component', () => {
-    render(<MenuItem {...menuItemProps} />);
+    render(<SiteMapItem {...siteMapItemProps} />);
 
     expect(screen.getByRole('none')).toBeInTheDocument();
     expect(screen.getByRole('menuitem', { name: 'Accueil' })).toBeInTheDocument();
@@ -30,7 +30,7 @@ describe('MenuItem', () => {
   it('should render aria-current attribute when item is current page', () => {
     vi.spyOn(navigation, 'usePathname').mockReturnValue('/home');
 
-    render(<MenuItem {...menuItemProps} />);
+    render(<SiteMapItem {...siteMapItemProps} />);
 
     expect(screen.getByRole('none')).toBeInTheDocument();
     expect(screen.getByRole('menuitem', { name: 'Accueil' })).toBeInTheDocument();

@@ -4,7 +4,7 @@ import type { FC } from 'react';
 
 import type { NavItemDataProps } from '@/types/globals';
 
-const MenuItem: FC<NavItemDataProps> = ({ label, url }) => {
+const SiteMapItem: FC<NavItemDataProps> = ({ label, url }) => {
   const currentPage = usePathname();
 
   const isCurrentPage = currentPage === url;
@@ -13,7 +13,7 @@ const MenuItem: FC<NavItemDataProps> = ({ label, url }) => {
     <li role='none'>
       <Link
         {...(isCurrentPage && { 'aria-current': 'page' })}
-        className={`hover:bg-secondary-background inline-block w-full rounded-lg py-2 text-center text-base font-normal duration-300 md:inline md:p-2 md:text-left ${isCurrentPage ? 'bg-secondary-background' : ''}`}
+        className='text-base font-normal hover:underline'
         href={url}
         role='menuitem'
       >
@@ -23,4 +23,4 @@ const MenuItem: FC<NavItemDataProps> = ({ label, url }) => {
   );
 };
 
-export default MenuItem;
+export default SiteMapItem;
