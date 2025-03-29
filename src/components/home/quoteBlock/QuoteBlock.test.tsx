@@ -1,12 +1,12 @@
 import QuoteBlock, { type QuoteBlockProps } from './QuoteBlock';
 import { render, screen } from '@testing-library/react';
 
-const quoteBlockProps: QuoteBlockProps = {
+const quoteBlockProps = {
   author: 'Dorian',
   authorJob: 'Dev',
   avatarUrl: '/image.png',
   quote: 'Unbelievable !'
-};
+} satisfies QuoteBlockProps;
 
 describe('QuoteBlock', () => {
   it('should render component', () => {

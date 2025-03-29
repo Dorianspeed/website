@@ -1,9 +1,9 @@
 import SiteMapList, { type SiteMapListProps } from './SiteMapList';
 import { render, screen } from '@testing-library/react';
 
-const siteMapListProps: SiteMapListProps = {
+const siteMapListProps = {
   navListName: 'legal'
-};
+} satisfies SiteMapListProps;
 
 describe('SiteMapList', () => {
   it('should render component', () => {

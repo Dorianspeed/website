@@ -5,12 +5,12 @@ import type { SocialMediaItemDataProps } from '@/types/globals';
 
 import LinkedinIcon from '@/assets/linkedin.svg';
 
-const socialMediaItemProps: SocialMediaItemDataProps = {
+const socialMediaItemProps = {
   icon: <LinkedinIcon aria-hidden={true} data-testid='linkedin-icon' />,
   label: 'Ajoutez-moi sur LinkedIn',
   position: 1,
   url: 'https://www.linkedin.com/in/garcia-dorian-dev'
-};
+} satisfies SocialMediaItemDataProps;
 
 describe('SocialMediaItem', () => {
   it('should render component', () => {

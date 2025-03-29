@@ -1,6 +1,6 @@
 import type { QuoteBlockProps } from '@/components/home/quoteBlock/QuoteBlock';
 
-export const QUOTES_DATA: Array<QuoteBlockProps> = [
+export const QUOTES_DATA = [
   {
     author: 'Dorian Garcia',
     authorJob: 'Développeur web front-end',
@@ -37,4 +37,4 @@ export const QUOTES_DATA: Array<QuoteBlockProps> = [
     avatarUrl: '/avatar.webp',
     quote: 'Une personne qui a le sens de l’humour'
   }
-];
+] satisfies Array<QuoteBlockProps>;

@@ -11,25 +11,25 @@ export const MISSIONS_URL = '/my-missions';
 export const PROJECTS_URL = '/my-projects';
 export const RESUME_URL = '/my-resume';
 
-export const MENU_ITEMS_DATA: Array<NavItemDataProps> = [
+export const MENU_ITEMS_DATA = [
   { label: 'Accueil', position: 1, url: HOME_URL },
   { label: 'Mon CV', position: 2, url: RESUME_URL },
   { label: 'Mes missions', position: 3, url: MISSIONS_URL },
   { label: 'Mes projets', position: 4, url: PROJECTS_URL },
   { label: 'Contact', position: 5, url: CONTACT_URL }
-];
+] satisfies Array<NavItemDataProps>;
 
-export const SITE_MAP_ITEMS_DATA: Record<SiteMapNavList, Array<NavItemDataProps>> = {
+export const SITE_MAP_ITEMS_DATA = {
   legal: MENU_ITEMS_DATA,
   pages: [{ label: 'Mentions légales', position: 1, url: LEGAL_NOTICE_URL }]
-};
+} satisfies Record<SiteMapNavList, Array<NavItemDataProps>>;
 
-export const SITE_MAP_NAV_LIST_LABELS: Record<SiteMapNavList, string> = {
+export const SITE_MAP_NAV_LIST_LABELS = {
   legal: 'Légal',
   pages: 'Pages'
-};
+} satisfies Record<SiteMapNavList, string>;
 
-export const SOCIAL_MEDIA_ITEMS_DATA: Array<SocialMediaItemDataProps> = [
+export const SOCIAL_MEDIA_ITEMS_DATA = [
   {
     icon: <LinkedinIcon aria-hidden={true} />,
     label: 'Ajoutez-moi sur LinkedIn',
@@ -48,4 +48,4 @@ export const SOCIAL_MEDIA_ITEMS_DATA: Array<SocialMediaItemDataProps> = [
     position: 3,
     url: 'https://github.com/Dorianspeed'
   }
-];
+] satisfies Array<SocialMediaItemDataProps>;

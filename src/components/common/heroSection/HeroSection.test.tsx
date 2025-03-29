@@ -1,10 +1,10 @@
 import HeroSection, { type HeroSectionProps } from './HeroSection';
 import { render, screen } from '@testing-library/react';
 
-const heroSectionProps: HeroSectionProps = {
+const heroSectionProps = {
   subtitle: 'Subtitle',
   title: 'Title'
-};
+} satisfies HeroSectionProps;
 
 describe('HeroSection', () => {
   it('should render full component', () => {

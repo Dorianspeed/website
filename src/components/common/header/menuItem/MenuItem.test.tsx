@@ -9,11 +9,11 @@ vi.mock('next/navigation', async () => ({
   usePathname: () => '/'
 }));
 
-const menuItemProps: NavItemDataProps = {
+const menuItemProps = {
   label: 'Accueil',
   position: 1,
   url: '/home'
-};
+} satisfies NavItemDataProps;
 
 describe('MenuItem', () => {
   it('should render component', () => {
