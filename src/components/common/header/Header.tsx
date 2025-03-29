@@ -15,7 +15,7 @@ const Header = () => {
   const orderedMenuItemsData = [...MENU_ITEMS_DATA].sort((a, b) => a.position - b.position);
 
   return (
-    <header className='border-primary-border relative justify-between border-b px-8 py-9 md:flex md:flex-row md:items-center'>
+    <header className='border-default-border bg-default-bg-default sticky top-0 justify-between border-b p-6 md:relative md:flex md:flex-row md:items-center md:px-8 md:py-9'>
       <div className='h-10 w-10'>
         <LaptopIcon aria-hidden={true} data-testid='smile-icon' />
       </div>
@@ -23,7 +23,7 @@ const Header = () => {
         <button
           aria-controls='menu'
           aria-expanded={isMenuOpen}
-          className='absolute top-9.5 right-8 cursor-pointer md:hidden'
+          className='absolute top-6.5 right-6 cursor-pointer md:top-9.5 md:right-8 md:hidden'
           onClick={() => setIsMenuOpen((isMenuOpen) => !isMenuOpen)}
           type='button'
         >

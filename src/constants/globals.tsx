@@ -4,17 +4,24 @@ import GithubIcon from '@/assets/github.svg';
 import LinkedinIcon from '@/assets/linkedin.svg';
 import XIcon from '@/assets/x.svg';
 
+export const CONTACT_URL = '/contact';
+export const HOME_URL = '/home';
+export const LEGAL_NOTICE_URL = '/legal-notice';
+export const MISSIONS_URL = '/my-missions';
+export const PROJECTS_URL = '/my-projects';
+export const RESUME_URL = '/my-resume';
+
 export const MENU_ITEMS_DATA: Array<NavItemDataProps> = [
-  { label: 'Accueil', position: 1, url: '/home' },
-  { label: 'Mon CV', position: 2, url: '/my-resume' },
-  { label: 'Mes missions', position: 3, url: '/my-missions' },
-  { label: 'Mes projets', position: 4, url: '/my-projects' },
-  { label: 'Contact', position: 5, url: '/contact' }
+  { label: 'Accueil', position: 1, url: HOME_URL },
+  { label: 'Mon CV', position: 2, url: RESUME_URL },
+  { label: 'Mes missions', position: 3, url: MISSIONS_URL },
+  { label: 'Mes projets', position: 4, url: PROJECTS_URL },
+  { label: 'Contact', position: 5, url: CONTACT_URL }
 ];
 
 export const SITE_MAP_ITEMS_DATA: Record<SiteMapNavList, Array<NavItemDataProps>> = {
   legal: MENU_ITEMS_DATA,
-  pages: [{ label: 'Mentions légales', position: 1, url: '/legal-notice' }]
+  pages: [{ label: 'Mentions légales', position: 1, url: LEGAL_NOTICE_URL }]
 };
 
 export const SITE_MAP_NAV_LIST_LABELS: Record<SiteMapNavList, string> = {

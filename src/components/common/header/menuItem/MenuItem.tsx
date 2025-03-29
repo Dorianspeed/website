@@ -13,7 +13,7 @@ const MenuItem: FC<NavItemDataProps> = ({ label, url }) => {
     <li role='none'>
       <Link
         {...(isCurrentPage && { 'aria-current': 'page' })}
-        className={`hover:bg-secondary-background inline-block w-full rounded-lg py-2 text-center text-base font-normal duration-300 md:inline md:p-2 md:text-left ${isCurrentPage ? 'bg-secondary-background' : ''}`}
+        className={`hover:bg-brand-bg-tertiary inline-block w-full rounded-lg py-2 text-center text-base font-normal duration-300 md:inline md:p-2 md:text-left ${isCurrentPage ? 'bg-brand-bg-tertiary' : ''}`}
         href={url}
         role='menuitem'
       >

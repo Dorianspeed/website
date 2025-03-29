@@ -1,3 +1,5 @@
-const MyMissions = () => <div />;
+import MyMissions from '@/components/myMissions/MyMissions';
 
-export default MyMissions;
+const MyMissionsPage = () => <MyMissions />;
+
+export default MyMissionsPage;

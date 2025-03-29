@@ -6,7 +6,7 @@ const SocialMediaItem: FC<SocialMediaItemDataProps> = ({ icon, label, url }) => 
   <li role='none'>
     <a
       aria-label={label}
-      className='hover:text-tertiary-background inline-block h-6 w-6'
+      className='hover:text-neutral-icon-secondary inline-block h-6 w-6'
       href={url}
       rel='noopener noreferrer'
       role='menuitem'

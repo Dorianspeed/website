@@ -1,3 +1,5 @@
-const MyCv = () => <div />;
+import MyResume from '@/components/myResume/MyResume';
 
-export default MyCv;
+const MyResumePage = () => <MyResume />;
+
+export default MyResumePage;
