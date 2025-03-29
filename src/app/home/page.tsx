@@ -1,3 +1,7 @@
-const Home = () => <div />;
+'use client';
 
-export default Home;
+import Home from '@/components/home/Home';
+
+const HomePage = () => <Home />;
+
+export default HomePage;

@@ -11,7 +11,7 @@ import { SITE_MAP_ITEMS_DATA, SOCIAL_MEDIA_ITEMS_DATA } from '@/constants/global
 import LaptopIcon from '@/assets/laptop.svg';
 
 const Footer = () => (
-  <footer className='border-primary-border flex flex-col gap-16 border-t p-8 md:flex-row md:gap-0'>
+  <footer className='border-default-border flex flex-col gap-16 border-t p-8 md:flex-row md:gap-0'>
     <nav
       aria-label='Social media'
       className='flex w-full items-center justify-between md:max-w-3xs md:flex-col md:items-stretch md:justify-normal md:gap-8'

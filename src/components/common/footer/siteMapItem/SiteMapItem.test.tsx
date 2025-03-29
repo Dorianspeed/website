@@ -9,11 +9,11 @@ vi.mock('next/navigation', async () => ({
   usePathname: () => '/'
 }));
 
-const siteMapItemProps: NavItemDataProps = {
+const siteMapItemProps = {
   label: 'Accueil',
   position: 1,
   url: '/home'
-};
+} satisfies NavItemDataProps;
 
 describe('SiteMapItem', () => {
   it('should render component', () => {

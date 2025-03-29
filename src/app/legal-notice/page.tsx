@@ -1,3 +1,5 @@
-const LegalNotice = () => <div />;
+import LegalNotice from '@/components/legalNotice/LegalNotice';
 
-export default LegalNotice;
+const LegalNoticePage = () => <LegalNotice />;
+
+export default LegalNoticePage;
