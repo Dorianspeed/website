@@ -10,7 +10,7 @@ const Home = () => (
   <main className='h-full'>
     <HeroSection subtitle='Développeur web front-end' title='Dorian Garcia'>
       <a className='btn btn-secondary' href={RESUME_URL}>
-        <div className='h-4 w-4'>
+        <div className='h-4 w-4 shrink-0'>
           <TruckIcon aria-hidden={true} />
         </div>
         Découvrir mon CV
