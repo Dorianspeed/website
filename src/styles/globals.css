@@ -6,8 +6,11 @@
 }
 
 @theme inline {
+  --color-brand-bg-default: #2c2c2c;
   --color-brand-bg-tertiary: #f5f5f5;
+  --color-brand-border-default: #2c2c2c;
   --color-brand-text-secondary: var(--foreground);
+  --color-brand-text-onbrand: #f5f5f5;
   --color-default-bg-default: var(--background);
   --color-default-border: #d9d9d9;
   --color-default-text-secondary: #757575;
@@ -23,9 +26,23 @@
   border: 1px solid;
   border-radius: var(--radius-lg);
   display: flex;
+  font-size: var(--text-base);
+  font-weight: 400;
   gap: calc(var(--spacing) * 2);
-  padding: calc(var(--spacing) * 3) calc(var(--spacing) * 10);
+  padding: calc(var(--spacing) * 3);
   transition-duration: 300ms;
+  width: fit-content;
+}
+
+@utility btn-primary {
+  background: var(--color-brand-bg-default);
+  border-color: var(--color-brand-border-default);
+  color: var(--color-brand-text-onbrand);
+
+  &:hover {
+    background: var(--color-neutral-bg-tertiary-hover);
+    color: var(--foreground);
+  }
 }
 
 @utility btn-secondary {
