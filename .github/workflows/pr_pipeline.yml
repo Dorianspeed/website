@@ -4,7 +4,7 @@ on: pull_request
 
 jobs:
   build:
-    needs: [circular-deps, commitlint, lint]
+    needs: [circular-deps, lint]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -22,6 +22,7 @@ jobs:
         run: yarn circular-deps
 
   commitlint:
+    if: github.event.pull_request.user.login != 'dependabot[bot]'
     needs: prettify
     runs-on: ubuntu-latest
     steps:
@@ -62,7 +63,7 @@ jobs:
           skip_fetch: true
 
   tests:
-    needs: [circular-deps, commitlint, lint]
+    needs: [circular-deps, lint]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
