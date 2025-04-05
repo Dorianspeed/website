@@ -43,6 +43,12 @@
     background: var(--color-neutral-bg-tertiary-hover);
     color: var(--foreground);
   }
+
+  &:disabled {
+    background: var(--color-default-border);
+    border-color: var(--color-default-text-tertiary);
+    color: var(--color-default-text-tertiary);
+  }
 }
 
 @utility btn-secondary {
