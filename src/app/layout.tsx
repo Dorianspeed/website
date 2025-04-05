@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Noto_Sans } from 'next/font/google';
 import type { ReactNode } from 'react';
+import { ToastContainer } from 'react-toastify';
 
 import '@/styles/globals.css';
 
@@ -25,6 +26,7 @@ const RootLayout = ({
   return (
     <html lang='fr'>
       <body className={`${notoSans.className} antialiased`}>
+        <ToastContainer />
         <Header />
         {children}
         <Footer />

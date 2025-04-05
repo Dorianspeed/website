@@ -1,5 +1,10 @@
 import type { ReactNode } from 'react';
 
+export type FormLabelsProps = {
+  label: string;
+  placeholder: string;
+};
+
 export type NavItemDataProps = {
   label: string;
   position: number;
