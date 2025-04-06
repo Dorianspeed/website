@@ -18,7 +18,7 @@ const ContactForm = () => {
 
   const {
     control,
-    formState: { isValid },
+    formState: { isValid, isSubmitting },
     handleSubmit
   } = useForm({
     defaultValues: CONTACT_FORM_DEFAULT_VALUES,
@@ -74,12 +74,16 @@ const ContactForm = () => {
       <Textarea<FormProps> control={control} labels={CONTACT_FORM_LABELS} name='message' />
       <button
         className='btn btn-primary w-full cursor-pointer justify-center self-center'
-        disabled={!isValid}
+        disabled={!isValid || isSubmitting}
         type='submit'
       >
-        <div className='size-4 shrink-0'>
-          <SendIcon aria-hidden={true} />
-        </div>
+        {isSubmitting ? (
+          <div className='border-default-text-tertiary size-4 shrink-0 animate-spin rounded-full border-t border-r' />
+        ) : (
+          <div className='size-4 shrink-0'>
+            <SendIcon aria-hidden={true} />
+          </div>
+        )}
         Soumettre
       </button>
     </form>
