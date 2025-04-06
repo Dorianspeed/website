@@ -7,12 +7,12 @@ import TriangleAlertIcon from '@/assets/triangle-alert.svg';
 const Toast = ({ closeToast, toastProps: { ariaLabel } }: ToastContentProps) => (
   <div className='bg-red-50 p-4 text-red-500'>
     <button
-      className='text-brand-text-secondary absolute top-0 right-0 cursor-pointer duration-300 hover:text-red-500'
+      className='text-brand-text-secondary absolute top-1 right-1 cursor-pointer duration-300 hover:text-red-500'
       onClick={closeToast}
       type='button'
     >
       <span className='sr-only'>Fermer</span>
-      <div className='size-8'>
+      <div className='size-5'>
         <CrossIcon aria-hidden={true} />
       </div>
     </button>
