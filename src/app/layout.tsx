@@ -22,17 +22,15 @@ const RootLayout = ({
   children
 }: Readonly<{
   children: ReactNode;
-}>) => {
-  return (
-    <html lang='fr'>
-      <body className={`${notoSans.className} antialiased`}>
-        <ToastContainer />
-        <Header />
-        {children}
-        <Footer />
-      </body>
-    </html>
-  );
-};
+}>) => (
+  <html lang='fr'>
+    <body className={`${notoSans.className} antialiased`}>
+      <ToastContainer />
+      <Header />
+      {children}
+      <Footer />
+    </body>
+  </html>
+);
 
 export default RootLayout;
