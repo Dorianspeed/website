@@ -37,7 +37,7 @@ const MissionBlock: FC<MissionBlockProps> = ({
       </ul>
     </div>
     <a className='btn btn-primary' href={companyUrl} rel='noopener noreferrer' target='_blank'>
-      <div className='h-4 w-4 shrink-0'>
+      <div className='size-4 shrink-0'>
         <ExternalLinkIcon aria-hidden={true} />
       </div>
       Voir le site

@@ -17,7 +17,7 @@ const Footer = () => (
       className='flex w-full items-center justify-between md:max-w-3xs md:flex-col md:items-stretch md:justify-normal md:gap-8'
       role='navigation'
     >
-      <div className='h-8 w-8'>
+      <div className='size-8'>
         <LaptopIcon aria-hidden={true} />
       </div>
       <ul aria-label='Social media' className='flex items-center gap-4' role='menubar'>
