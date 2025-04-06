@@ -77,7 +77,7 @@ const ContactForm = () => {
         disabled={!isValid}
         type='submit'
       >
-        <div className='h-4 w-4 shrink-0'>
+        <div className='size-4 shrink-0'>
           <SendIcon aria-hidden={true} />
         </div>
         Soumettre

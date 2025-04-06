@@ -12,12 +12,12 @@ const Toast = ({ closeToast, toastProps: { ariaLabel } }: ToastContentProps) => 
       type='button'
     >
       <span className='sr-only'>Fermer</span>
-      <div className='h-8 w-8'>
+      <div className='size-8'>
         <CrossIcon aria-hidden={true} />
       </div>
     </button>
     <div className='flex items-center gap-2'>
-      <div className='h-5 w-5 shrink-0'>
+      <div className='size-5 shrink-0'>
         <TriangleAlertIcon aria-hidden={true} />
       </div>
       <p>{ariaLabel}</p>

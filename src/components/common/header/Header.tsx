@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <header className='border-default-border bg-default-bg-default sticky top-0 justify-between border-b p-6 md:relative md:flex md:flex-row md:items-center md:px-8 md:py-9'>
-      <div className='h-10 w-10'>
+      <div className='size-10'>
         <LaptopIcon aria-hidden={true} data-testid='smile-icon' />
       </div>
       <nav aria-label='Main menu' role='navigation'>
@@ -28,7 +28,7 @@ const Header = () => {
           type='button'
         >
           <span className='sr-only'>Menu</span>
-          <div className='h-9 w-9'>
+          <div className='size-9'>
             {isMenuOpen ? (
               <CrossIcon aria-hidden={true} data-testid='cross-icon' />
             ) : (

@@ -35,7 +35,7 @@ const Textarea = <T extends FieldValues>({ control, labels, name }: TextareaProp
         className={`${error ? 'visible' : 'invisible'} flex h-6 items-center gap-2 text-sm text-red-700`}
         data-testid='textarea-error'
       >
-        <div className='h-4 w-4'>
+        <div className='size-4'>
           <TriangleAlertIcon aria-hidden={true} />
         </div>
         <p>{error?.message}</p>

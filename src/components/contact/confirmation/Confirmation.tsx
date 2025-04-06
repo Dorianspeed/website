@@ -10,7 +10,7 @@ const Confirmation = () => {
     <main>
       <HeroSection subtitle={undefined} title={undefined}>
         <div className='bg-default-bg-default border-default-border flex flex-col gap-6 rounded-lg border p-6'>
-          <div className='mx-auto h-12 w-12'>
+          <div className='mx-auto size-12'>
             <CheckCircleIcon aria-hidden={true} />
           </div>
           <div className='flex flex-col gap-2 text-center'>
@@ -20,7 +20,7 @@ const Confirmation = () => {
             </h2>
           </div>
           <a className='btn btn-primary mx-auto' href={HOME_URL}>
-            <div className='h-4 w-4 shrink-0'>
+            <div className='size-4 shrink-0'>
               <HomeIcon aria-hidden={true} />
             </div>
             Retour à l’accueil

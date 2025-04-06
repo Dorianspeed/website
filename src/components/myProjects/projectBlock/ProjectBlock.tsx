@@ -43,7 +43,7 @@ const ProjectBlock: FC<ProjectBlockProps> = ({
         rel='noopener noreferrer'
         target='_blank'
       >
-        <div className='h-4 w-4'>
+        <div className='size-4'>
           <ExternalLinkIcon aria-hidden={true} />
         </div>
         Voir le projet sur GitHub
