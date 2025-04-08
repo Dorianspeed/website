@@ -1,15 +1,11 @@
 {
+  "extends": "@website/typescript-config/nextjs.json",
   "compilerOptions": {
-    "allowJs": true,
     "baseUrl": ".",
-    "esModuleInterop": true,
-    "incremental": true,
-    "isolatedModules": true,
     "jsx": "preserve",
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
     "moduleResolution": "bundler",
-    "noEmit": true,
     "paths": {
       "@/assets/*": ["./src/assets/*"],
       "@/components/*": ["./src/components/*"],
@@ -19,12 +15,7 @@
       "@/utils/*": ["./src/utils/*"]
     },
     "plugins": [{ "name": "next" }],
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "ES2024",
     "types": ["vitest/globals", "@testing-library/jest-dom"]
   },
-  "exclude": ["node_modules"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"]
 }

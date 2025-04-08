@@ -3,25 +3,31 @@ name: PR Pipeline
 on: pull_request
 
 jobs:
-  build:
-    needs: [circular-deps, lint]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: ./.github/actions/install_deps
-      - name: Run build
-        run: yarn build
-
-  circular-deps:
+  build-and-tests:
+    name: Circular deps / Linter / Build / Tests
     needs: prettify
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Cache turbo build setup
+        uses: actions/cache@v4
+        with:
+          path: .turbo
+          key: ${{ runner.os }}-turbo-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-turbo-
       - uses: ./.github/actions/install_deps
-      - name: Check circular-deps
+      - name: Run circular deps
         run: yarn circular-deps
+      - name: Run linter
+        run: yarn lint
+      - name: Run build
+        run: yarn build
+      - name: Run tests
+        run: yarn test
 
   commitlint:
+    name: Conventionnal commits
     if: github.event.pull_request.user.login != 'dependabot[bot]'
     needs: prettify
     runs-on: ubuntu-latest
@@ -33,16 +39,8 @@ jobs:
       - name: Check conventionnal commits
         run: yarn commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
 
-  lint:
-    needs: prettify
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: ./.github/actions/install_deps
-      - name: Run linter
-        run: yarn eslint
-
   prettify:
+    name: Code formatter
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -50,7 +48,7 @@ jobs:
           fetch-depth: 2
       - uses: ./.github/actions/install_deps
       - name: Run prettier
-        run: yarn prettier "./src/**/*.{ts,tsx}" --write
+        run: yarn prettier "./**/*.{ts,tsx}" --write
       - name: Get last commit author
         id: last-commit-author
         run: echo "author=$(git log -1 --pretty=\"%an <%ae>\")" >> $GITHUB_OUTPUT
@@ -61,12 +59,3 @@ jobs:
           commit_options: '--amend --no-edit'
           push_options: '--force'
           skip_fetch: true
-
-  tests:
-    needs: [circular-deps, lint]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: ./.github/actions/install_deps
-      - name: Run tests
-        run: yarn test

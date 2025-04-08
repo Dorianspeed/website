@@ -1,6 +1,6 @@
 import type { NextConfig } from 'next';
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   experimental: { turbo: { rules: { '*.svg': { as: '*.js', loaders: ['@svgr/webpack'] } } } },
   redirects: async () => [{ destination: '/home', permanent: true, source: '/' }],
   webpack: (config) => {
@@ -12,6 +12,6 @@ const nextConfig: NextConfig = {
 
     return config;
   }
-};
+} satisfies NextConfig;
 
 export default nextConfig;

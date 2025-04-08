@@ -2,14 +2,14 @@ import type { FieldPath } from 'react-hook-form';
 
 import type { FormLabelsProps } from '@/types/globals';
 
-import type { FormProps } from '@/components/contact/contactForm/ContactForm.schema';
+import type { ContactFormProps } from '@/components/contact/contactForm/ContactForm.schema';
 
 export const CONTACT_FORM_DEFAULT_VALUES = {
   companyName: '',
   email: '',
   message: '',
   name: ''
-} satisfies FormProps;
+} satisfies ContactFormProps;
 
 export const CONTACT_FORM_LABELS = {
   companyName: {
@@ -19,4 +19,4 @@ export const CONTACT_FORM_LABELS = {
   email: { label: 'Email', placeholder: 'Votre email...' },
   message: { label: 'Message', placeholder: 'Votre message...' },
   name: { label: 'Nom', placeholder: 'Votre nom...' }
-} satisfies Record<FieldPath<FormProps>, FormLabelsProps>;
+} satisfies Record<FieldPath<ContactFormProps>, FormLabelsProps>;

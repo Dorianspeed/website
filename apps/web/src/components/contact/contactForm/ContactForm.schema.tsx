@@ -16,4 +16,4 @@ export const contactFormSchema = zod.object({
   name: zod.string().min(2, { message: MIN_CHAR_MESSAGE }).max(50, { message: MAX_CHAR_MESSAGE })
 });
 
-export type FormProps = zod.infer<typeof contactFormSchema>;
+export type ContactFormProps = zod.infer<typeof contactFormSchema>;

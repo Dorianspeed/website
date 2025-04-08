@@ -1,10 +1,10 @@
 import { createTransport, getTestMessageUrl } from 'nodemailer';
 
-import type { FormProps } from '@/components/contact/contactForm/ContactForm.schema';
+import type { ContactFormProps } from '@/components/contact/contactForm/ContactForm.schema';
 
 const handler = async (request: Request) => {
   try {
-    const { companyName, email, message, name }: FormProps = await request.json();
+    const { companyName, email, message, name }: ContactFormProps = await request.json();
 
     const transporter = createTransport({
       auth: {
