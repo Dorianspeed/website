@@ -1,0 +1,49 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "circular-deps": "yarn madge --circular ./src --extensions ts,tsx",
+    "dev": "next dev --turbopack",
+    "lint": "yarn eslint",
+    "prod": "next start",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "next": "15.2.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@hookform/resolvers": "^5.0.0",
+    "@svgr/webpack": "^8.1.0",
+    "@tailwindcss/postcss": "^4",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^22",
+    "@types/nodemailer": "^6.4.17",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^4.3.4",
+    "@vitest/coverage-v8": "^3.1.1",
+    "@website/eslint-config": "*",
+    "@website/typescript-config": "*",
+    "eslint": "^9.23.0",
+    "jsdom": "^26.0.0",
+    "madge": "^8.0.0",
+    "nodemailer": "^6.10.0",
+    "react-hook-form": "^7.55.0",
+    "react-toastify": "^11.0.5",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vite-plugin-magical-svg": "^1.6.0",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.1.1",
+    "zod": "^3.24.2"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "build": { "dependsOn": ["^build"], "outputs": [".next/**", "!.next/cache/**"] },
+    "circular-deps": {},
+    "dev": { "cache": false, "persistent": true },
+    "lint": {},
+    "prod": { "cache": false, "dependsOn": ["build"], "persistent": true },
+    "test": { "dependsOn": ["^test"] },
+    "test:coverage": {},
+    "test:watch": { "cache": false, "persistent": true }
+  }
+}

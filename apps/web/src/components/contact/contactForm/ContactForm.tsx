@@ -1,4 +1,4 @@
-import { type FormProps, contactFormSchema } from './ContactForm.schema';
+import { type ContactFormProps, contactFormSchema } from './ContactForm.schema';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
@@ -33,7 +33,7 @@ const ContactForm = () => {
         email: email.trim(),
         message: message.trim(),
         name: name.trim()
-      } satisfies FormProps;
+      } satisfies ContactFormProps;
 
       await fetcher<{ message: string }>('/api/contact', {
         body: JSON.stringify(trimmedFormValues),
@@ -53,25 +53,25 @@ const ContactForm = () => {
       className='bg-default-bg-default border-default-border flex w-64 flex-col gap-2 rounded-lg border p-6 min-[375px]:w-72 min-[425px]:w-80 md:w-96'
       onSubmit={onSubmit}
     >
-      <Input<FormProps>
+      <Input<ContactFormProps>
         autoComplete='family-name'
         control={control}
         labels={CONTACT_FORM_LABELS}
         name='name'
       />
-      <Input<FormProps>
+      <Input<ContactFormProps>
         autoComplete={undefined}
         control={control}
         labels={CONTACT_FORM_LABELS}
         name='companyName'
       />
-      <Input<FormProps>
+      <Input<ContactFormProps>
         autoComplete='email'
         control={control}
         labels={CONTACT_FORM_LABELS}
         name='email'
       />
-      <Textarea<FormProps> control={control} labels={CONTACT_FORM_LABELS} name='message' />
+      <Textarea<ContactFormProps> control={control} labels={CONTACT_FORM_LABELS} name='message' />
       <button
         className='btn btn-primary w-full cursor-pointer justify-center self-center'
         disabled={!isValid || isSubmitting}

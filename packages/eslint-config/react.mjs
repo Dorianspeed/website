@@ -1,32 +1,28 @@
-import { fixupPluginRules } from '@eslint/compat';
 import eslint from '@eslint/js';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
+import reactPlugin from 'eslint-plugin-react';
+import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import tsEslint from 'typescript-eslint';
 
 export default tsEslint.config(
-  { ignores: ['**/.next/', '**/postcss.config.mjs'] },
+  { ignores: ['**/.turbo', '**/.next/', '**/coverage'] },
+  { files: ['./src/**/*.ts', './src/**/*.tsx'] },
   eslint.configs.recommended,
-  ...tsEslint.configs.recommended,
+  tsEslint.configs.recommended,
   {
-    plugins: { react, 'react-hooks': fixupPluginRules(reactHooks) },
+    plugins: { react: reactPlugin, 'react-hooks': reactHooksPlugin },
     rules: {
-      ...reactHooks.configs.recommended.rules,
       '@typescript-eslint/array-type': ['error', { default: 'generic' }],
       '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
       '@typescript-eslint/consistent-type-imports': [
         'error',
-        {
-          disallowTypeAnnotations: true,
-          fixStyle: 'separate-type-imports',
-          prefer: 'type-imports'
-        }
+        { disallowTypeAnnotations: true, fixStyle: 'separate-type-imports', prefer: 'type-imports' }
       ],
       '@typescript-eslint/no-unused-vars': [
         'error',
         { argsIgnorePattern: '^_', ignoreRestSiblings: true }
       ],
       'react-hooks/exhaustive-deps': 'off',
+      'react-hooks/rules-of-hooks': 'error',
       'react/button-has-type': 'error',
       'react/destructuring-assignment': 'error',
       'react/function-component-definition': [
