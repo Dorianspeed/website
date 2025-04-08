@@ -1,6 +1,8 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
+    allow:
+      - dependency-type: "direct"
     assignees:
       - "Dorianspeed"
     commit-message:
@@ -13,6 +15,13 @@ updates:
         update-types:
           - patch
           - minor
+      yarn-major:
+        applies-to: version-updates
+        update-types:
+          - major
+    open-pull-requests-limit: 5
+    reviewers:
+      - "Dorianspeed"
     schedule:
       interval: "daily"
       time: "08:00"
@@ -32,6 +41,13 @@ updates:
         update-types:
           - patch
           - minor
+      actions-major:
+        applies-to: version-updates
+        update-types:
+          - major
+    open-pull-requests-limit: 5
+    reviewers:
+      - "Dorianspeed"
     schedule:
       interval: "daily"
       time: "08:00"
