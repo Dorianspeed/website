@@ -17,6 +17,7 @@ updates:
       interval: "daily"
       time: "08:00"
       timezone: "Europe/Paris"
+    versioning-strategy: "increase"
 
   - package-ecosystem: "github-actions"
     assignees:
