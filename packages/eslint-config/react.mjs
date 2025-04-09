@@ -5,7 +5,7 @@ import turboPlugin from 'eslint-plugin-turbo';
 import tsEslint from 'typescript-eslint';
 
 export default tsEslint.config(
-  { ignores: ['**/.turbo', '**/.next/', '**/coverage'] },
+  { ignores: ['**/.react-email', '**/.turbo', '**/.next/', '**/coverage'] },
   { files: ['./src/**/*.ts', './src/**/*.tsx'] },
   eslint.configs.recommended,
   tsEslint.configs.recommended,

@@ -5,6 +5,7 @@
     "esModuleInterop": true,
     "incremental": true,
     "isolatedModules": true,
+    "lib": ["DOM", "DOM.Iterable", "ES2024"],
     "module": "NodeNext",
     "moduleResolution": "nodenext",
     "noEmit": true,

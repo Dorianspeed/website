@@ -2,10 +2,6 @@
   "extends": "@website/typescript-config/nextjs.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "jsx": "preserve",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
-    "moduleResolution": "bundler",
     "paths": {
       "@/assets/*": ["./src/assets/*"],
       "@/components/*": ["./src/components/*"],
@@ -13,9 +9,7 @@
       "@/styles/*": ["./src/styles/*"],
       "@/types/*": ["./src/types/*"],
       "@/utils/*": ["./src/utils/*"]
-    },
-    "plugins": [{ "name": "next" }],
-    "types": ["vitest/globals", "@testing-library/jest-dom"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"]
 }
