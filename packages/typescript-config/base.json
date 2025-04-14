@@ -2,16 +2,22 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "allowJs": true,
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
     "esModuleInterop": true,
     "incremental": true,
     "isolatedModules": true,
+    "lib": ["DOM", "DOM.Iterable", "ES2024"],
     "module": "NodeNext",
     "moduleResolution": "nodenext",
     "noEmit": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
+    "sourceMap": true,
     "strict": true,
-    "target": "ES2024"
+    "target": "ES2024",
+    "types": ["vitest/globals", "@testing-library/jest-dom"]
   },
   "exclude": ["node_modules"]
 }

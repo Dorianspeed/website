@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
+    "build": "next build --no-lint",
     "circular-deps": "yarn madge --circular ./src --extensions ts,tsx",
-    "dev": "next dev --turbopack",
+    "dev": "next dev -p 3000 --turbopack",
     "lint": "yarn eslint",
     "prod": "next start",
     "test": "vitest run",
