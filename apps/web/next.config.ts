@@ -1,8 +1,8 @@
 import type { NextConfig } from 'next';
 
 const nextConfig = {
-  experimental: { turbo: { rules: { '*.svg': { as: '*.js', loaders: ['@svgr/webpack'] } } } },
   redirects: async () => [{ destination: '/home', permanent: true, source: '/' }],
+  turbopack: { rules: { '*.svg': { as: '*.js', loaders: ['@svgr/webpack'] } } },
   webpack: (config) => {
     config.module.rules.push({
       issuer: /\.[jt]sx?$/,

@@ -1,7 +1,6 @@
 {
   "name": "@website/eslint-config",
   "version": "0.0.0",
-  "private": "true",
   "exports": {
     "./react": "./react.mjs"
   },
