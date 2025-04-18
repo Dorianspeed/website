@@ -1,8 +1,9 @@
 import * as navigation from 'next/navigation';
-import MenuItem from './MenuItem';
 import { render, screen } from '@testing-library/react';
 
 import type { NavItemDataProps } from '@/types/globals';
+
+import MenuItem from './MenuItem';
 
 vi.mock('next/navigation', async () => ({
   ...(await vi.importActual('next/navigation')),

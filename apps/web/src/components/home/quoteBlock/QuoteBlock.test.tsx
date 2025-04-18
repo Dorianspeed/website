@@ -1,5 +1,6 @@
-import QuoteBlock, { type QuoteBlockProps } from './QuoteBlock';
 import { render, screen } from '@testing-library/react';
+
+import QuoteBlock, { type QuoteBlockProps } from './QuoteBlock';
 
 const quoteBlockProps = {
   author: 'Dorian',

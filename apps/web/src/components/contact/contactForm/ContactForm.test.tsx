@@ -1,9 +1,10 @@
-import ContactForm from './ContactForm';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import * as http from '@/utils/http';
 import * as toast from '@/utils/toast';
+
+import ContactForm from './ContactForm';
 
 const mockPush = vi.fn();
 

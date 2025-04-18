@@ -1,7 +1,7 @@
+import { MISSIONS_DATA } from '@/constants/missions';
+
 import HeroSection from '../common/heroSection/HeroSection';
 import MissionBlock from './missionBlock/MissionBlock';
-
-import { MISSIONS_DATA } from '@/constants/missions';
 
 const MyMissions = () => (
   <main className='h-full'>

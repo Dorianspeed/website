@@ -1,7 +1,7 @@
+import { PROJECTS_DATA } from '@/constants/projects';
+
 import HeroSection from '../common/heroSection/HeroSection';
 import ProjectBlock from './projectBlock/ProjectBlock';
-
-import { PROJECTS_DATA } from '@/constants/projects';
 
 const MyProjects = () => (
   <main className='h-full'>

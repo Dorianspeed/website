@@ -1,5 +1,6 @@
-import ProjectBlock, { type ProjectBlockProps } from './ProjectBlock';
 import { render, screen } from '@testing-library/react';
+
+import ProjectBlock, { type ProjectBlockProps } from './ProjectBlock';
 
 const projectBlockProps = {
   description: 'Here is a project',

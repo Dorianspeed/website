@@ -1,5 +1,6 @@
-import LegalNotice from './LegalNotice';
 import { render, screen } from '@testing-library/react';
+
+import LegalNotice from './LegalNotice';
 
 describe('LegalNotice', () => {
   it('should render component', () => {

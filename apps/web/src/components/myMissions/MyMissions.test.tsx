@@ -1,5 +1,6 @@
-import MyMissions from './MyMissions';
 import { render, screen } from '@testing-library/react';
+
+import MyMissions from './MyMissions';
 
 describe('MyMissions', () => {
   it('should render component', () => {

@@ -1,10 +1,11 @@
 import * as reactHookForm from 'react-hook-form';
-import Input, { type InputProps } from './Input';
 import { render, renderHook, screen } from '@testing-library/react';
 
 import { CONTACT_FORM_LABELS } from '@/constants/form';
 
 import type { ContactFormProps } from '@/components/contact/contactForm/ContactForm.schema';
+
+import Input, { type InputProps } from './Input';
 
 vi.mock('react-hook-form', async () => ({
   ...(await vi.importActual('react-hook-form')),

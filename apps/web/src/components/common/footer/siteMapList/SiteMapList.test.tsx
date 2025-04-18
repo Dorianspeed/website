@@ -1,5 +1,6 @@
-import SiteMapList, { type SiteMapListProps } from './SiteMapList';
 import { render, screen } from '@testing-library/react';
+
+import SiteMapList, { type SiteMapListProps } from './SiteMapList';
 
 const siteMapListProps = {
   navListName: 'legal'

@@ -1,8 +1,9 @@
 import * as navigation from 'next/navigation';
-import SiteMapItem from './SiteMapItem';
 import { render, screen } from '@testing-library/react';
 
 import type { NavItemDataProps } from '@/types/globals';
+
+import SiteMapItem from './SiteMapItem';
 
 vi.mock('next/navigation', async () => ({
   ...(await vi.importActual('next/navigation')),

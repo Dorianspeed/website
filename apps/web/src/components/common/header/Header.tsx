@@ -1,6 +1,5 @@
 'use client';
 
-import MenuItem from './menuItem/MenuItem';
 import { useState } from 'react';
 
 import { MENU_ITEMS_DATA } from '@/constants/globals';
@@ -8,6 +7,8 @@ import { MENU_ITEMS_DATA } from '@/constants/globals';
 import BurgerIcon from '@/assets/burger.svg';
 import CrossIcon from '@/assets/cross.svg';
 import LaptopIcon from '@/assets/laptop.svg';
+
+import MenuItem from './menuItem/MenuItem';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
