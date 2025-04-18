@@ -13,7 +13,7 @@ import SocialMediaItem from './socialMediaItem/SocialMediaItem';
 const Footer = () => (
   <footer className='border-default-border flex flex-col gap-16 border-t p-8 md:flex-row md:gap-0'>
     <nav
-      aria-label='Social media'
+      aria-label='Réseaux sociaux'
       className='flex w-full items-center justify-between md:max-w-3xs md:flex-col md:items-stretch md:justify-normal md:gap-8'
       role='navigation'
     >
@@ -29,7 +29,7 @@ const Footer = () => (
       </ul>
     </nav>
     <nav
-      aria-label='Site map'
+      aria-label='Plan du site'
       className='flex w-full flex-col gap-6 md:max-w-lg md:flex-row md:gap-0'
       role='navigation'
     >

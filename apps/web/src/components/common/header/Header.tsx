@@ -20,7 +20,7 @@ const Header = () => {
       <div className='size-10'>
         <LaptopIcon aria-hidden={true} data-testid='smile-icon' />
       </div>
-      <nav aria-label='Main menu' role='navigation'>
+      <nav aria-label='Menu principal' role='navigation'>
         <button
           aria-controls='menu'
           aria-expanded={isMenuOpen}
@@ -38,7 +38,7 @@ const Header = () => {
           </div>
         </button>
         <ul
-          aria-label='Main menu'
+          aria-label='Menu principal'
           className={`${isMenuOpen ? 'mt-16 flex flex-col' : 'hidden'} gap-2 md:flex md:flex-row md:items-center`}
           role='menubar'
         >
