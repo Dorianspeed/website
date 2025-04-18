@@ -1,3 +1,3 @@
-const MyResume = () => <main className='h-full'></main>;
+const MyResume = () => <div></div>;
 
 export default MyResume;

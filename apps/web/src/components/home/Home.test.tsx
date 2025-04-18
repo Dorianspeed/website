@@ -6,7 +6,6 @@ describe('Home', () => {
   it('should render component', () => {
     render(<Home />);
 
-    expect(screen.getByRole('main')).toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 1, name: 'Dorian Garcia' })).toBeInTheDocument();
     expect(
       screen.getByRole('heading', { level: 2, name: 'Développeur web front-end' })
