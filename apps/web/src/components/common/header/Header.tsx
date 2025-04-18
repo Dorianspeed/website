@@ -16,7 +16,7 @@ const Header = () => {
   const orderedMenuItemsData = [...MENU_ITEMS_DATA].sort((a, b) => a.position - b.position);
 
   return (
-    <header className='border-default-border bg-default-bg-default sticky top-0 justify-between border-b p-6 md:relative md:flex md:flex-row md:items-center md:px-8 md:py-9'>
+    <header className='border-default-border bg-default-bg-default fixed top-0 w-full justify-between border-b p-6 md:relative md:flex md:flex-row md:items-center md:px-8 md:py-9'>
       <div className='size-10'>
         <LaptopIcon aria-hidden={true} data-testid='smile-icon' />
       </div>
