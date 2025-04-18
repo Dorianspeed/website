@@ -1,5 +1,6 @@
-import Layout, { type LayoutProps } from './Layout';
 import { render, screen } from '@testing-library/react';
+
+import Layout, { type LayoutProps } from './Layout';
 
 const defaultProps = { metaTitle: 'I am a meta title' } satisfies LayoutProps;
 

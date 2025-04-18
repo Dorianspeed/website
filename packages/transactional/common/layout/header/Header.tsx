@@ -1,6 +1,6 @@
 import { Button, Column, Img, Row, Section } from '@react-email/components';
 
-//TODO add website url
+//TODO add website url and adjust img url
 const Header = () => (
   <Section className='border-b-[1px] border-solid border-gray-200 p-[32px]'>
     <Row>

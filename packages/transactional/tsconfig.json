@@ -1,13 +1,4 @@
 {
   "extends": "@website/typescript-config/react.json",
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/common/*": ["./common/*"],
-      "@/constants/*": ["./constants/*"],
-      "@/emails/*": ["./emails/*"],
-      "@/types/*": ["./types/*"]
-    }
-  },
   "include": ["."]
 }
