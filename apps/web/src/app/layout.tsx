@@ -27,7 +27,7 @@ const RootLayout = ({
     <body className={`${notoSans.className} antialiased`}>
       <ToastContainer />
       <Header />
-      {children}
+      <main className='h-full'>{children}</main>
       <Footer />
     </body>
   </html>

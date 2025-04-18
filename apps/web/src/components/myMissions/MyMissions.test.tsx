@@ -6,7 +6,6 @@ describe('MyMissions', () => {
   it('should render component', () => {
     render(<MyMissions />);
 
-    expect(screen.getByRole('main')).toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 1, name: 'Mes missions' })).toBeInTheDocument();
     expect(screen.getAllByRole('img')).toHaveLength(4);
     expect(screen.getAllByRole('heading', { level: 2 })).toHaveLength(4);

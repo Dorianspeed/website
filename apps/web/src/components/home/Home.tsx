@@ -1,3 +1,5 @@
+import { Fragment } from 'react';
+
 import { RESUME_URL } from '@/constants/globals';
 import { QUOTES_DATA } from '@/constants/quotes';
 
@@ -7,7 +9,7 @@ import HeroSection from '../common/heroSection/HeroSection';
 import QuoteBlock from './quoteBlock/QuoteBlock';
 
 const Home = () => (
-  <main className='h-full'>
+  <Fragment>
     <HeroSection subtitle='Développeur web front-end' title='Dorian Garcia'>
       <a className='btn btn-secondary' href={RESUME_URL}>
         <div className='h-4 w-4 shrink-0'>
@@ -27,7 +29,7 @@ const Home = () => (
         ))}
       </div>
     </section>
-  </main>
+  </Fragment>
 );
 
 export default Home;

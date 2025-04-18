@@ -1,7 +1,9 @@
+import { Fragment } from 'react';
+
 import HeroSection from '../common/heroSection/HeroSection';
 
 const LegalNotice = () => (
-  <main className='h-full'>
+  <Fragment>
     <HeroSection subtitle={undefined} title='Mentions légales' />
     <section className='flex flex-col gap-12 p-6 md:gap-16 md:p-16'>
       <div>
@@ -39,7 +41,7 @@ const LegalNotice = () => (
         <p className='text-base font-normal'>Aucun cookie n'est utilisé sur ce site.</p>
       </div>
     </section>
-  </main>
+  </Fragment>
 );
 
 export default LegalNotice;

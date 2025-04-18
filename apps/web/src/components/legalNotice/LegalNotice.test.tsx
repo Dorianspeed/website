@@ -6,7 +6,6 @@ describe('LegalNotice', () => {
   it('should render component', () => {
     render(<LegalNotice />);
 
-    expect(screen.getByRole('main')).toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 2, name: 'Société' })).toBeInTheDocument();
     expect(
       screen.getByRole('heading', { level: 2, name: 'Hébergement du site' })
