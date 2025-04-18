@@ -1,5 +1,6 @@
-import MyProjects from './MyProjects';
 import { render, screen } from '@testing-library/react';
+
+import MyProjects from './MyProjects';
 
 describe('MyProjects', () => {
   it('should render component', () => {

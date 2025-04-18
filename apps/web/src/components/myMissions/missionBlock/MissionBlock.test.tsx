@@ -1,5 +1,6 @@
-import MissionBlock, { type MissionBlockProps } from './MissionBlock';
 import { render, screen } from '@testing-library/react';
+
+import MissionBlock, { type MissionBlockProps } from './MissionBlock';
 
 const missionBlockProps = {
   companyName: 'Dorian Garcia EI',

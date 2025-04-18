@@ -1,9 +1,10 @@
-import SocialMediaItem from './SocialMediaItem';
 import { render, screen } from '@testing-library/react';
 
 import type { SocialMediaItemDataProps } from '@/types/globals';
 
 import LinkedinIcon from '@/assets/linkedin.svg';
+
+import SocialMediaItem from './SocialMediaItem';
 
 const socialMediaItemProps = {
   icon: <LinkedinIcon aria-hidden={true} data-testid='linkedin-icon' />,

@@ -1,5 +1,6 @@
-import Contact from './Contact';
 import { render, screen } from '@testing-library/react';
+
+import Contact from './Contact';
 
 vi.mock('next/navigation', async () => ({
   ...(await vi.importActual('next/navigation')),

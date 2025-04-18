@@ -1,4 +1,3 @@
-import { type ContactFormProps, contactFormSchema } from './ContactForm.schema';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
@@ -12,6 +11,8 @@ import Input from '@/components/common/input/Input';
 import Textarea from '@/components/common/textarea/Textarea';
 
 import SendIcon from '@/assets/send.svg';
+
+import { type ContactFormProps, contactFormSchema } from './ContactForm.schema';
 
 const ContactForm = () => {
   const { push } = useRouter();

@@ -1,15 +1,12 @@
 import { Container, Text } from '@react-email/components';
-import type { FC } from 'react';
 
-import type { ContactInformationProps } from '@/types/globals';
+import ContactInformation from '../../common/contactInformation/ContactInformation';
+import HeroSection from '../../common/heroSection/HeroSection';
+import Layout from '../../common/layout/Layout';
+import { TEXT_DEFAULT_STYLES } from '../../constants/defaultStyles';
+import type { ContactInformationProps } from '../../types/globals';
 
-import { TEXT_DEFAULT_STYLES } from '@/constants/defaultStyles';
-
-import ContactInformation from '@/common/contactInformation/ContactInformation';
-import HeroSection from '@/common/heroSection/HeroSection';
-import Layout from '@/common/layout/Layout';
-
-export const ContactRequest: FC<ContactInformationProps> = (contactInfoProps) => (
+const ContactRequest = (contactInfoProps: ContactInformationProps) => (
   <Layout metaTitle='Demande de contact'>
     <HeroSection
       subtitle='À répondre dans les plus brefs délais !'

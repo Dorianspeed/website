@@ -5,9 +5,8 @@
     "^@/utils/(.*)$",
     "^@/styles/(.*)$",
     "^@/components/(.*)$",
-    "^@/common/(.*)$",
-    "^@/emails/(.*)$",
-    "^@/assets/(.*)$"
+    "^@/assets/(.*)$",
+    "^[./]"
   ],
   "importOrderGroupNamespaceSpecifiers": true,
   "importOrderSeparation": true,

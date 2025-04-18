@@ -1,7 +1,8 @@
-import Footer from './footer/Footer';
-import Header from './header/Header';
 import { Body, Head, Html, Tailwind } from '@react-email/components';
 import type { FC, PropsWithChildren } from 'react';
+
+import Footer from './footer/Footer';
+import Header from './header/Header';
 
 export type LayoutProps = {
   metaTitle: string;

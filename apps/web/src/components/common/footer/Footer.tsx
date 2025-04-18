@@ -1,14 +1,14 @@
 'use client';
 
-import SiteMapItem from './siteMapItem/SiteMapItem';
-import SiteMapList from './siteMapList/SiteMapList';
-import SocialMediaItem from './socialMediaItem/SocialMediaItem';
-
 import type { SiteMapNavList } from '@/types/globals';
 
 import { SITE_MAP_ITEMS_DATA, SOCIAL_MEDIA_ITEMS_DATA } from '@/constants/globals';
 
 import LaptopIcon from '@/assets/laptop.svg';
+
+import SiteMapItem from './siteMapItem/SiteMapItem';
+import SiteMapList from './siteMapList/SiteMapList';
+import SocialMediaItem from './socialMediaItem/SocialMediaItem';
 
 const Footer = () => (
   <footer className='border-default-border flex flex-col gap-16 border-t p-8 md:flex-row md:gap-0'>

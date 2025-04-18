@@ -31,7 +31,6 @@
     "madge": "^8.0.0",
     "react-email": "^4.0.4",
     "typescript": "^5",
-    "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.1.1"
   }
 }

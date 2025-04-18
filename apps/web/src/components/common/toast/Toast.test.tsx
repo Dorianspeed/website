@@ -1,7 +1,8 @@
-import Toast from './Toast';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { type ToastContentProps, cssTransition } from 'react-toastify';
+
+import Toast from './Toast';
 
 const mockCloseToast = vi.fn();
 

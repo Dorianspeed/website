@@ -1,4 +1,4 @@
 {
-  "!(*.webp|*.svg)": "prettier --write",
+  "!(*.webp|*.svg|*.png)": "prettier --write",
   "./src/**/*.{ts,tsx}": "eslint"
 }

@@ -1,5 +1,6 @@
-import HeroSection, { type HeroSectionProps } from './HeroSection';
 import { render, screen } from '@testing-library/react';
+
+import HeroSection, { type HeroSectionProps } from './HeroSection';
 
 const defaultProps = {
   subtitle: 'I am a subtitle',

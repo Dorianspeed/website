@@ -1,10 +1,10 @@
-import HeroSection from '../common/heroSection/HeroSection';
-import QuoteBlock from './quoteBlock/QuoteBlock';
-
 import { RESUME_URL } from '@/constants/globals';
 import { QUOTES_DATA } from '@/constants/quotes';
 
 import TruckIcon from '@/assets/truck.svg';
+
+import HeroSection from '../common/heroSection/HeroSection';
+import QuoteBlock from './quoteBlock/QuoteBlock';
 
 const Home = () => (
   <main className='h-full'>

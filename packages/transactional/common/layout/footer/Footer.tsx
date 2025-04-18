@@ -1,7 +1,8 @@
 import { Column, Img, Link, Row, Section, Text } from '@react-email/components';
 
-import { TEXT_DEFAULT_STYLES } from '@/constants/defaultStyles';
+import { TEXT_DEFAULT_STYLES } from '../../../constants/defaultStyles';
 
+//TODO adjust img urls
 const Footer = () => (
   <Section className='border-t-[1px] border-solid border-gray-200 p-[32px]'>
     <Row>

@@ -1,4 +1,4 @@
-import type { ContactInformationPropsKey, LabelProps } from '@/types/globals';
+import type { ContactInformationPropsKey, LabelProps } from '../types/globals';
 
 export const CONTACT_INFORMATION_LABELS = {
   companyName: { position: 2, title: 'Le nom de votre société :' },

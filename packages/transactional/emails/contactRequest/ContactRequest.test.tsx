@@ -1,7 +1,7 @@
-import ContactRequest from './ContactRequest';
 import { render, screen } from '@testing-library/react';
 
-import type { ContactInformationProps } from '@/types/globals';
+import type { ContactInformationProps } from '../../types/globals';
+import ContactRequest from './ContactRequest';
 
 const defaultProps = {
   companyName: 'Company',

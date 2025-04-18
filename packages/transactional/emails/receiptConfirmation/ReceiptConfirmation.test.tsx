@@ -1,7 +1,7 @@
-import ReceiptConfirmation from './ReceiptConfirmation';
 import { render, screen } from '@testing-library/react';
 
-import type { ContactInformationProps } from '@/types/globals';
+import type { ContactInformationProps } from '../../types/globals';
+import ReceiptConfirmation from './ReceiptConfirmation';
 
 const defaultProps = {
   companyName: 'Company',
