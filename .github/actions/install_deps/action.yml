@@ -1,5 +1,5 @@
-name: 'Install deps'
-description: 'Install deps action to avoid duplication'
+name: Install deps
+description: Install deps action to avoid duplication
 runs:
   using: composite
   steps:
