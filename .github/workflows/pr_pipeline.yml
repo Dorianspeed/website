@@ -1,11 +1,11 @@
-name: PR Pipeline
+name: autofix.ci # Mandatory name for autofix-ci action usage
 
 on: pull_request
 
 jobs:
   build-and-tests:
     name: Circular deps / Linter / Build / Tests
-    needs: prettify
+    needs: prettier
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -28,8 +28,8 @@ jobs:
 
   commitlint:
     name: Conventionnal commits
+    needs: prettier
     if: github.event.pull_request.user.login != 'dependabot[bot]'
-    needs: prettify
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -39,23 +39,15 @@ jobs:
       - name: Check conventionnal commits
         run: yarn commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
 
-  prettify:
-    name: Code formatter
+  prettier:
+    name: Prettier
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
       - uses: ./.github/actions/install_deps
       - name: Run prettier
         run: yarn prettier "./**/*.{ts,tsx}" --write
-      - name: Get last commit author
-        id: last-commit-author
-        run: echo "author=$(git log -1 --pretty=\"%an <%ae>\")" >> $GITHUB_OUTPUT
-      - name: Amend no edit the last commit
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Commit changes
+        uses: autofix-ci/action@551dded8c6cc8a1054039c8bc0b8b48c51dfc6ef
         with:
-          commit_author: ${{ steps.last-commit-author.outputs.author }}
-          commit_options: '--amend --no-edit'
-          push_options: '--force'
-          skip_fetch: true
+          commit-message: 'chore: apply code formatting'
