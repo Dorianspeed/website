@@ -1,16 +1,30 @@
 import { Fragment } from 'react';
 
-import { MISSIONS_DATA } from '@/constants/missions';
+import { MISSIONS_DATA } from '@/constants/data';
 
+import ExternalLinkIcon from '@/assets/external-link.svg';
+
+import Block from '../common/block/Block';
 import HeroSection from '../common/heroSection/HeroSection';
-import MissionBlock from './missionBlock/MissionBlock';
 
 const MyMissions = () => (
   <Fragment>
     <HeroSection subtitle={undefined} title='Mes missions' />
     <section className='grid-auto-fit-64 md:grid-auto-fit-80 grid gap-12 p-6 md:p-16'>
-      {MISSIONS_DATA.map((data, index) => (
-        <MissionBlock key={index} {...data} />
+      {MISSIONS_DATA.map(({ companyUrl, picture, ...otherData }, index) => (
+        <Block key={index} picture={{ ...picture, height: 120, width: 120 }} {...otherData}>
+          <a
+            className='btn btn-primary'
+            href={companyUrl}
+            rel='noopener noreferrer'
+            target='_blank'
+          >
+            <div className='size-4 shrink-0'>
+              <ExternalLinkIcon aria-hidden={true} />
+            </div>
+            Voir le site
+          </a>
+        </Block>
       ))}
     </section>
   </Fragment>

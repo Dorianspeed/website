@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 
+import { QUOTES_DATA } from '@/constants/data';
 import { RESUME_URL } from '@/constants/globals';
-import { QUOTES_DATA } from '@/constants/quotes';
 
 import TruckIcon from '@/assets/truck.svg';
 
