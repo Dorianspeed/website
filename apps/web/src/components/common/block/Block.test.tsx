@@ -1,18 +1,17 @@
 import { render, screen } from '@testing-library/react';
 
-import ProjectBlock, { type ProjectBlockProps } from './ProjectBlock';
+import Block, { type BlockProps } from './Block';
 
-const projectBlockProps = {
-  description: 'Here is a project',
-  featuresList: ['React', 'Typescript'],
-  pictureUrl: '/avatar.webp',
-  projectName: 'Website',
-  projectUrl: 'https://github.com/Dorianspeed'
-} satisfies ProjectBlockProps;
+const defaultBlockProps = {
+  list: ['React', 'Typescript'],
+  picture: { alt: 'Project picture', height: 40, url: '/avatar.webp', width: 40 },
+  subtitle: { content: 'Here is a project', element: 'h3' },
+  title: { content: 'Website', element: 'h2' }
+} satisfies BlockProps;
 
-describe('ProjectBlock', () => {
+describe('Block', () => {
   it('should render component', () => {
-    render(<ProjectBlock {...projectBlockProps} />);
+    render(<Block {...defaultBlockProps} />);
 
     expect(screen.getByRole('img', { name: 'Project picture' })).toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 2, name: 'Website' })).toBeInTheDocument();
@@ -21,6 +20,5 @@ describe('ProjectBlock', () => {
     ).toBeInTheDocument();
     expect(screen.getByRole('list')).toBeInTheDocument();
     expect(screen.getAllByRole('listitem')).toHaveLength(2);
-    expect(screen.getByRole('link', { name: 'Voir le projet sur GitHub' })).toBeInTheDocument();
   });
 });
