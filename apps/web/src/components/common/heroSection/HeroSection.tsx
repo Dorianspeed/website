@@ -1,11 +1,11 @@
-import type { FC, PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 
 export type HeroSectionProps = {
   subtitle: string | undefined;
   title: string | undefined;
 };
 
-const HeroSection: FC<PropsWithChildren<HeroSectionProps>> = ({ children, subtitle, title }) => {
+const HeroSection = ({ children, subtitle, title }: PropsWithChildren<HeroSectionProps>) => {
   if (!children && !subtitle && !title) {
     return null;
   }

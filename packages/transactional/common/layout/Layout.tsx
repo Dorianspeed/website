@@ -1,5 +1,5 @@
 import { Body, Head, Html, Tailwind } from '@react-email/components';
-import type { FC, PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 
 import Footer from './footer/Footer';
 import Header from './header/Header';
@@ -8,7 +8,7 @@ export type LayoutProps = {
   metaTitle: string;
 };
 
-const Layout: FC<PropsWithChildren<LayoutProps>> = ({ children, metaTitle }) => (
+const Layout = ({ children, metaTitle }: PropsWithChildren<LayoutProps>) => (
   <Html lang='fr'>
     <Head>
       <title>{metaTitle}</title>

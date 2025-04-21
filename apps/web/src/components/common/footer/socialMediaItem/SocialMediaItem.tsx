@@ -1,8 +1,6 @@
-import type { FC } from 'react';
-
 import type { SocialMediaItemDataProps } from '@/types/globals';
 
-const SocialMediaItem: FC<SocialMediaItemDataProps> = ({ icon, label, url }) => (
+const SocialMediaItem = ({ icon, label, url }: SocialMediaItemDataProps) => (
   <li role='none'>
     <a
       aria-label={label}
