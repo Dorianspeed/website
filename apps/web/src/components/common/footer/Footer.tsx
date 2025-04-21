@@ -33,15 +33,17 @@ const Footer = () => (
       className='flex w-full flex-col gap-6 md:max-w-lg md:flex-row md:gap-0'
       role='navigation'
     >
-      {Object.entries(SITE_MAP_ITEMS_DATA).map(([navListName, siteMapItemsData]) => (
-        <SiteMapList key={navListName} navListName={navListName as SiteMapNavList}>
-          {[...siteMapItemsData]
-            .sort((a, b) => a.position - b.position)
-            .map((data) => (
-              <SiteMapItem key={data.url} {...data} />
-            ))}
-        </SiteMapList>
-      ))}
+      {Object.entries(SITE_MAP_ITEMS_DATA)
+        .sort(([_, itemA], [__, itemB]) => itemA.position - itemB.position)
+        .map(([navListName, { data: siteMapItemsData }]) => (
+          <SiteMapList key={navListName} navListName={navListName as SiteMapNavList}>
+            {siteMapItemsData
+              .sort((a, b) => a.position - b.position)
+              .map((data) => (
+                <SiteMapItem key={data.url} {...data} />
+              ))}
+          </SiteMapList>
+        ))}
     </nav>
   </footer>
 );

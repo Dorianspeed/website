@@ -22,6 +22,11 @@ export type NavItemDataProps = {
   url: string;
 };
 
+export type SiteMapItemsDataProps = {
+  data: Array<NavItemDataProps>;
+  position: number;
+};
+
 export type SiteMapNavList = 'legal' | 'pages';
 
 export type SocialMediaItemDataProps = {
