@@ -1,17 +1,17 @@
 import { Container, Heading, Text } from '@react-email/components';
 import parse from 'html-react-parser';
-import { type FC, Fragment } from 'react';
+import { Fragment } from 'react';
 
 import { TEXT_DEFAULT_STYLES } from '../../constants/defaultStyles';
 import { CONTACT_INFORMATION_LABELS } from '../../constants/labels';
 import type { ContactInformationProps, ContactInformationPropsKey } from '../../types/globals';
 
-const ContactInformation: FC<ContactInformationProps> = ({
+const ContactInformation = ({
   companyName = '',
   email = '',
   message = '',
   name = ''
-}) => {
+}: ContactInformationProps) => {
   const props = { companyName, email, message, name } satisfies ContactInformationProps;
 
   const sortedLabels = Object.entries(CONTACT_INFORMATION_LABELS).sort(
