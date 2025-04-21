@@ -15,7 +15,7 @@ const QuoteBlock: FC<QuoteBlockProps> = ({ author, authorJob, avatarUrl, quote }
     </blockquote>
     <div className='flex items-center gap-3'>
       <Image
-        alt='Author’s picture'
+        alt='Photo de l’auteur'
         className='rounded-full object-cover'
         height={40}
         loading='lazy'

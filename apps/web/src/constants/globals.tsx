@@ -1,4 +1,9 @@
-import type { NavItemDataProps, SiteMapNavList, SocialMediaItemDataProps } from '@/types/globals';
+import type {
+  NavItemDataProps,
+  SiteMapItemsDataProps,
+  SiteMapNavList,
+  SocialMediaItemDataProps
+} from '@/types/globals';
 
 import GithubIcon from '@/assets/github.svg';
 import LinkedinIcon from '@/assets/linkedin.svg';
@@ -20,9 +25,9 @@ export const MENU_ITEMS_DATA = [
 ] satisfies Array<NavItemDataProps>;
 
 export const SITE_MAP_ITEMS_DATA = {
-  legal: MENU_ITEMS_DATA,
-  pages: [{ label: 'Mentions légales', position: 1, url: LEGAL_NOTICE_URL }]
-} satisfies Record<SiteMapNavList, Array<NavItemDataProps>>;
+  legal: { data: [{ label: 'Mentions légales', position: 1, url: LEGAL_NOTICE_URL }], position: 2 },
+  pages: { data: MENU_ITEMS_DATA, position: 1 }
+} satisfies Record<SiteMapNavList, SiteMapItemsDataProps>;
 
 export const SITE_MAP_NAV_LIST_LABELS = {
   legal: 'Légal',

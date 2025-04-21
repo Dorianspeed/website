@@ -12,7 +12,7 @@ describe('Home', () => {
     ).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Découvrir mon CV' })).toBeInTheDocument();
     expect(screen.getAllByRole('blockquote')).toHaveLength(6);
-    expect(screen.getAllByRole('img', { name: 'Author’s picture' })).toHaveLength(6);
+    expect(screen.getAllByRole('img', { name: 'Photo de l’auteur' })).toHaveLength(6);
     expect(screen.getAllByRole('paragraph')).toHaveLength(12);
   });
 });
