@@ -14,7 +14,7 @@ describe('QuoteBlock', () => {
     render(<QuoteBlock {...quoteBlockProps} />);
 
     expect(screen.getByRole('blockquote')).toBeInTheDocument();
-    expect(screen.getByRole('img', { name: 'Author’s picture' })).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: 'Photo de l’auteur' })).toBeInTheDocument();
     expect(screen.getAllByRole('paragraph')).toHaveLength(2);
   });
 });

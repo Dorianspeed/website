@@ -11,9 +11,9 @@ describe('Footer', () => {
   it('should render component', () => {
     render(<Footer />);
 
-    expect(screen.getByRole('navigation', { name: 'Social media' })).toBeInTheDocument();
-    expect(screen.getByRole('navigation', { name: 'Site map' })).toBeInTheDocument();
-    expect(screen.getByRole('menubar', { name: 'Social media' })).toBeInTheDocument();
+    expect(screen.getByRole('navigation', { name: 'Réseaux sociaux' })).toBeInTheDocument();
+    expect(screen.getByRole('navigation', { name: 'Plan du site' })).toBeInTheDocument();
+    expect(screen.getByRole('menubar', { name: 'Réseaux sociaux' })).toBeInTheDocument();
     expect(screen.getByRole('menubar', { name: 'Pages' })).toBeInTheDocument();
     expect(screen.getByRole('menubar', { name: 'Légal' })).toBeInTheDocument();
     expect(screen.getAllByRole('none')).toHaveLength(9);
