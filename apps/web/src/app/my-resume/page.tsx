@@ -1,3 +1,5 @@
+'use client';
+
 import MyResume from '@/components/myResume/MyResume';
 
 const MyResumePage = () => <MyResume />;

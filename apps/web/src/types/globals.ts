@@ -1,7 +1,7 @@
 import type { HTMLElementType, ReactNode } from 'react';
 
 export type DefaultBlockProps = {
-  list: Array<string>;
+  blockList: Array<string>;
   picture: PictureProps;
   subtitle: TitleProps;
   title: TitleProps;
@@ -49,6 +49,19 @@ export type PicturePropsExtended = PictureProps & {
 export type ProjectsDataProps = DefaultBlockProps & {
   projectUrl: string;
 };
+
+export type ResumeDataProps = DefaultBlockProps & { assetsList: Array<string> };
+
+export type ResumeDataPropsExtended = {
+  data: Array<ResumeDataProps>;
+  position: number;
+};
+
+export type ResumeNavItemsDataProps = Omit<NavItemDataProps, 'url'> & {
+  url: `#${ResumeSections}`;
+};
+
+export type ResumeSections = 'my-professional-experiences' | 'my-courses' | 'my-certifications';
 
 type TitleProps = {
   content: string;
