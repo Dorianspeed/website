@@ -1,5 +1,7 @@
 import type {
   NavItemDataProps,
+  ResumeNavItemsDataProps,
+  ResumeSections,
   SiteMapItemsDataProps,
   SiteMapNavList,
   SocialMediaItemDataProps
@@ -23,6 +25,18 @@ export const MENU_ITEMS_DATA = [
   { label: 'Mes projets', position: 4, url: PROJECTS_URL },
   { label: 'Contact', position: 5, url: CONTACT_URL }
 ] satisfies Array<NavItemDataProps>;
+
+export const RESUME_SECTION_LABELS = {
+  'my-certifications': 'Mes certifications',
+  'my-courses': 'Mes formations',
+  'my-professional-experiences': 'Mes expériences professionnelles'
+} satisfies Record<ResumeSections, string>;
+
+export const SHORTCUTS_ITEMS_DATA = [
+  { label: 'Mes expériences professionnelles', position: 1, url: '#my-professional-experiences' },
+  { label: 'Mes formations', position: 2, url: '#my-courses' },
+  { label: 'Mes certifications', position: 3, url: '#my-certifications' }
+] satisfies Array<ResumeNavItemsDataProps>;
 
 export const SITE_MAP_ITEMS_DATA = {
   legal: { data: [{ label: 'Mentions légales', position: 1, url: LEGAL_NOTICE_URL }], position: 2 },

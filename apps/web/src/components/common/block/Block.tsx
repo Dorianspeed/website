@@ -7,7 +7,13 @@ export type BlockProps = Omit<DefaultBlockProps, 'picture'> & {
   picture: PicturePropsExtended;
 };
 
-const Block = ({ children, list, picture, subtitle, title }: PropsWithChildren<BlockProps>) => {
+const Block = ({
+  blockList,
+  children,
+  picture,
+  subtitle,
+  title
+}: PropsWithChildren<BlockProps>) => {
   const { alt: pictureAlt, height: pictureHeight, url: pictureUrl, width: pictureWidth } = picture;
   const { content: subtitleContent, element: Subtitle } = subtitle;
   const { content: titleContent, element: Title } = title;
@@ -29,16 +35,18 @@ const Block = ({ children, list, picture, subtitle, title }: PropsWithChildren<B
             <Subtitle className='text-default-text-secondary text-xl font-normal'>
               {subtitleContent}
             </Subtitle>
-            <ul
-              className='text-default-text-tertiary list-inside list-disc text-base font-normal'
-              role='list'
-            >
-              {list.map((item, index) => (
-                <li key={index} role='listitem'>
-                  {item}
-                </li>
-              ))}
-            </ul>
+            {Boolean(blockList.length) && (
+              <ul
+                className='text-default-text-tertiary list-inside list-disc text-base font-normal'
+                role='list'
+              >
+                {blockList.map((item, index) => (
+                  <li key={index} role='listitem'>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
           {children}
         </div>
