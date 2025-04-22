@@ -1,10 +1,10 @@
 import react from '@vitejs/plugin-react';
-import magicalSvg from 'vite-plugin-magical-svg';
+import svgr from 'vite-plugin-svgr';
 import tsConfigPaths from 'vite-tsconfig-paths';
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
-  plugins: [react(), tsConfigPaths(), magicalSvg({ target: 'react' })],
+  plugins: [react(), tsConfigPaths(), svgr({ include: '**/*.svg' })],
   test: {
     clearMocks: true,
     coverage: {

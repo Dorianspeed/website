@@ -4,6 +4,8 @@ import type { FormLabelsProps } from '@/types/globals';
 
 import TriangleAlertIcon from '@/assets/triangle-alert.svg';
 
+import SvgIcon from '../svgIcon/SvgIcon';
+
 export type TextareaProps<T extends FieldValues> = {
   control: Control<T>;
   labels: Record<FieldPath<T>, FormLabelsProps>;
@@ -35,9 +37,7 @@ const Textarea = <T extends FieldValues>({ control, labels, name }: TextareaProp
         className={`${error ? 'visible' : 'invisible'} flex h-6 items-center gap-2 text-sm text-red-700`}
         data-testid='textarea-error'
       >
-        <div className='size-4'>
-          <TriangleAlertIcon aria-hidden={true} />
-        </div>
+        <SvgIcon Icon={TriangleAlertIcon} size={4} />
         <p>{error?.message}</p>
       </div>
     </div>

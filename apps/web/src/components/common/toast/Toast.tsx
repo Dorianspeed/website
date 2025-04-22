@@ -3,6 +3,8 @@ import type { ToastContentProps } from 'react-toastify';
 import CrossIcon from '@/assets/cross.svg';
 import TriangleAlertIcon from '@/assets/triangle-alert.svg';
 
+import SvgIcon from '../svgIcon/SvgIcon';
+
 //TODO use toast type to define icons and colors
 const Toast = ({ closeToast, toastProps: { ariaLabel } }: ToastContentProps) => (
   <div className='bg-red-50 p-4 text-red-500'>
@@ -12,14 +14,10 @@ const Toast = ({ closeToast, toastProps: { ariaLabel } }: ToastContentProps) => 
       type='button'
     >
       <span className='sr-only'>Fermer</span>
-      <div className='size-5'>
-        <CrossIcon aria-hidden={true} />
-      </div>
+      <SvgIcon Icon={CrossIcon} size={5} />
     </button>
     <div className='flex items-center gap-2'>
-      <div className='size-5 shrink-0'>
-        <TriangleAlertIcon aria-hidden={true} />
-      </div>
+      <SvgIcon Icon={TriangleAlertIcon} size={5} />
       <p>{ariaLabel}</p>
     </div>
   </div>

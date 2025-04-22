@@ -8,6 +8,7 @@ import { fetcher } from '@/utils/http';
 import { toastError } from '@/utils/toast';
 
 import Input from '@/components/common/input/Input';
+import SvgIcon from '@/components/common/svgIcon/SvgIcon';
 import Textarea from '@/components/common/textarea/Textarea';
 
 import SendIcon from '@/assets/send.svg';
@@ -81,9 +82,7 @@ const ContactForm = () => {
         {isSubmitting ? (
           <div className='border-default-text-tertiary size-4 shrink-0 animate-spin rounded-full border-t border-r' />
         ) : (
-          <div className='size-4 shrink-0'>
-            <SendIcon aria-hidden={true} />
-          </div>
+          <SvgIcon Icon={SendIcon} size={4} />
         )}
         Soumettre
       </button>

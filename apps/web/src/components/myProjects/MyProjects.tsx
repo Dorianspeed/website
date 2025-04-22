@@ -6,6 +6,7 @@ import ExternalLinkIcon from '@/assets/external-link.svg';
 
 import Block from '../common/block/Block';
 import HeroSection from '../common/heroSection/HeroSection';
+import SvgIcon from '../common/svgIcon/SvgIcon';
 
 const MyProjects = () => (
   <Fragment>
@@ -19,9 +20,7 @@ const MyProjects = () => (
             rel='noopener noreferrer'
             target='_blank'
           >
-            <div className='size-4'>
-              <ExternalLinkIcon aria-hidden={true} />
-            </div>
+            <SvgIcon Icon={ExternalLinkIcon} size={4} />
             Voir le projet sur GitHub
           </a>
         </Block>

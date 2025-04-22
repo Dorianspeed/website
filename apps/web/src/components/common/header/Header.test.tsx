@@ -12,7 +12,7 @@ describe('Header', () => {
   it('should render component', () => {
     render(<Header />);
 
-    expect(screen.getByTestId('smile-icon')).toBeInTheDocument();
+    expect(screen.getByTestId('laptop-icon')).toBeInTheDocument();
     expect(screen.getByRole('navigation', { name: 'Menu principal' })).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Menu' })).toBeInTheDocument();
     expect(screen.getByTestId('burger-icon')).toBeInTheDocument();
