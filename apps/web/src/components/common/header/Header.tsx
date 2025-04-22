@@ -8,7 +8,10 @@ import BurgerIcon from '@/assets/burger.svg';
 import CrossIcon from '@/assets/cross.svg';
 import LaptopIcon from '@/assets/laptop.svg';
 
+import SvgIcon from '../svgIcon/SvgIcon';
 import MenuItem from './menuItem/MenuItem';
+
+const MOBILE_SVG_SIZE = 9;
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -17,9 +20,7 @@ const Header = () => {
 
   return (
     <header className='border-default-border bg-default-bg-default fixed top-0 w-full justify-between border-b p-6 md:relative md:flex md:flex-row md:items-center md:px-8 md:py-9'>
-      <div className='size-10'>
-        <LaptopIcon aria-hidden={true} data-testid='smile-icon' />
-      </div>
+      <SvgIcon Icon={LaptopIcon} dataTest='laptop-icon' size={10} />
       <nav aria-label='Menu principal' role='navigation'>
         <button
           aria-controls='menu'
@@ -29,13 +30,11 @@ const Header = () => {
           type='button'
         >
           <span className='sr-only'>Menu</span>
-          <div className='size-9'>
-            {isMenuOpen ? (
-              <CrossIcon aria-hidden={true} data-testid='cross-icon' />
-            ) : (
-              <BurgerIcon aria-hidden={true} data-testid='burger-icon' />
-            )}
-          </div>
+          {isMenuOpen ? (
+            <SvgIcon Icon={CrossIcon} dataTest='cross-icon' size={MOBILE_SVG_SIZE} />
+          ) : (
+            <SvgIcon Icon={BurgerIcon} dataTest='burger-icon' size={MOBILE_SVG_SIZE} />
+          )}
         </button>
         <ul
           aria-label='Menu principal'

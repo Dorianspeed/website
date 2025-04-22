@@ -6,15 +6,14 @@ import { RESUME_URL } from '@/constants/globals';
 import TruckIcon from '@/assets/truck.svg';
 
 import HeroSection from '../common/heroSection/HeroSection';
+import SvgIcon from '../common/svgIcon/SvgIcon';
 import QuoteBlock from './quoteBlock/QuoteBlock';
 
 const Home = () => (
   <Fragment>
     <HeroSection subtitle='Développeur web front-end' title='Dorian Garcia'>
       <a className='btn btn-secondary' href={RESUME_URL}>
-        <div className='h-4 w-4 shrink-0'>
-          <TruckIcon aria-hidden={true} />
-        </div>
+        <SvgIcon Icon={TruckIcon} size={4} />
         Découvrir mon CV
       </a>
     </HeroSection>

@@ -10,7 +10,8 @@ import Header from '@/components/common/header/Header';
 
 const notoSans = Noto_Sans({
   display: 'swap',
-  subsets: ['latin']
+  subsets: ['latin'],
+  variable: '--font-noto-sans'
 });
 
 export const metadata: Metadata = {
@@ -24,7 +25,9 @@ const RootLayout = ({
   children: ReactNode;
 }>) => (
   <html lang='fr'>
-    <body className={`${notoSans.className} antialiased`}>
+    <body
+      className={`bg-default-bg-default text-brand-text-secondary font-sans antialiased ${notoSans.variable}`}
+    >
       <ToastContainer />
       <Header />
       <main className='mt-[89px] h-full md:mt-0'>{children}</main>
