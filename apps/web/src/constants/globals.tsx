@@ -11,19 +11,21 @@ import GithubIcon from '@/assets/github.svg';
 import LinkedinIcon from '@/assets/linkedin.svg';
 import XIcon from '@/assets/x.svg';
 
-export const CONTACT_URL = '/contact';
-export const HOME_URL = '/home';
-export const LEGAL_NOTICE_URL = '/legal-notice';
-export const MISSIONS_URL = '/my-missions';
-export const PROJECTS_URL = '/my-projects';
-export const RESUME_URL = '/my-resume';
+export const INTERNAL_URLS = {
+  contact: '/contact',
+  home: '/home',
+  legalNotice: '/legal-notice',
+  missions: '/my-missions',
+  projects: '/my-projects',
+  resume: '/my-resume'
+};
 
 export const MENU_ITEMS_DATA = [
-  { label: 'Accueil', position: 1, url: HOME_URL },
-  { label: 'Mon CV', position: 2, url: RESUME_URL },
-  { label: 'Mes missions', position: 3, url: MISSIONS_URL },
-  { label: 'Mes projets', position: 4, url: PROJECTS_URL },
-  { label: 'Contact', position: 5, url: CONTACT_URL }
+  { label: 'Accueil', position: 1, url: INTERNAL_URLS.home },
+  { label: 'Mon CV', position: 2, url: INTERNAL_URLS.resume },
+  { label: 'Mes missions', position: 3, url: INTERNAL_URLS.missions },
+  { label: 'Mes projets', position: 4, url: INTERNAL_URLS.projects },
+  { label: 'Contact', position: 5, url: INTERNAL_URLS.contact }
 ] satisfies Array<NavItemDataProps>;
 
 export const RESUME_SECTION_LABELS = {
@@ -39,7 +41,10 @@ export const SHORTCUTS_ITEMS_DATA = [
 ] satisfies Array<ResumeNavItemsDataProps>;
 
 export const SITE_MAP_ITEMS_DATA = {
-  legal: { data: [{ label: 'Mentions légales', position: 1, url: LEGAL_NOTICE_URL }], position: 2 },
+  legal: {
+    data: [{ label: 'Mentions légales', position: 1, url: INTERNAL_URLS.legalNotice }],
+    position: 2
+  },
   pages: { data: MENU_ITEMS_DATA, position: 1 }
 } satisfies Record<SiteMapNavList, SiteMapItemsDataProps>;
 

@@ -20,7 +20,7 @@ const Header = () => {
 
   return (
     <header className='border-default-border bg-default-bg-default fixed top-0 w-full justify-between border-b p-6 md:relative md:flex md:flex-row md:items-center md:px-8 md:py-9'>
-      <SvgIcon Icon={LaptopIcon} dataTest='laptop-icon' size={10} />
+      <SvgIcon dataTest='laptop-icon' icon={LaptopIcon} size={10} />
       <nav aria-label='Menu principal' role='navigation'>
         <button
           aria-controls='menu'
@@ -31,9 +31,9 @@ const Header = () => {
         >
           <span className='sr-only'>Menu</span>
           {isMenuOpen ? (
-            <SvgIcon Icon={CrossIcon} dataTest='cross-icon' size={MOBILE_SVG_SIZE} />
+            <SvgIcon dataTest='cross-icon' icon={CrossIcon} size={MOBILE_SVG_SIZE} />
           ) : (
-            <SvgIcon Icon={BurgerIcon} dataTest='burger-icon' size={MOBILE_SVG_SIZE} />
+            <SvgIcon dataTest='burger-icon' icon={BurgerIcon} size={MOBILE_SVG_SIZE} />
           )}
         </button>
         <ul

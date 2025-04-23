@@ -14,10 +14,10 @@ const Toast = ({ closeToast, toastProps: { ariaLabel } }: ToastContentProps) => 
       type='button'
     >
       <span className='sr-only'>Fermer</span>
-      <SvgIcon Icon={CrossIcon} size={5} />
+      <SvgIcon dataTest={undefined} icon={CrossIcon} size={5} />
     </button>
     <div className='flex items-center gap-2'>
-      <SvgIcon Icon={TriangleAlertIcon} size={5} />
+      <SvgIcon dataTest={undefined} icon={TriangleAlertIcon} size={5} />
       <p>{ariaLabel}</p>
     </div>
   </div>

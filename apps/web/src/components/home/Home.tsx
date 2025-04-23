@@ -1,21 +1,26 @@
 import { Fragment } from 'react';
 
 import { QUOTES_DATA } from '@/constants/data';
-import { RESUME_URL } from '@/constants/globals';
+import { INTERNAL_URLS } from '@/constants/globals';
 
 import TruckIcon from '@/assets/truck.svg';
 
+import Button from '../common/button/Button';
 import HeroSection from '../common/heroSection/HeroSection';
-import SvgIcon from '../common/svgIcon/SvgIcon';
 import QuoteBlock from './quoteBlock/QuoteBlock';
 
 const Home = () => (
   <Fragment>
     <HeroSection subtitle='Développeur web front-end' title='Dorian Garcia'>
-      <a className='btn btn-secondary' href={RESUME_URL}>
-        <SvgIcon Icon={TruckIcon} size={4} />
+      <Button
+        appearance='secondary'
+        className={undefined}
+        href={INTERNAL_URLS.resume}
+        icon={TruckIcon}
+        type='link'
+      >
         Découvrir mon CV
-      </a>
+      </Button>
     </HeroSection>
     <section className='p-6 md:p-16'>
       <h3 className='text-2xl font-semibold'>Ce qu’ils pensent de moi</h3>

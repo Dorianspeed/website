@@ -7,6 +7,7 @@ import { CONTACT_FORM_DEFAULT_VALUES, CONTACT_FORM_LABELS } from '@/constants/fo
 import { fetcher } from '@/utils/http';
 import { toastError } from '@/utils/toast';
 
+import Button from '@/components/common/button/Button';
 import Input from '@/components/common/input/Input';
 import SvgIcon from '@/components/common/svgIcon/SvgIcon';
 import Textarea from '@/components/common/textarea/Textarea';
@@ -74,18 +75,21 @@ const ContactForm = () => {
         name='email'
       />
       <Textarea<ContactFormProps> control={control} labels={CONTACT_FORM_LABELS} name='message' />
-      <button
-        className='btn btn-primary w-full cursor-pointer justify-center self-center'
+      <Button
+        appearance='primary'
+        className='w-full justify-center self-center'
         disabled={!isValid || isSubmitting}
+        icon={
+          isSubmitting ? (
+            <div className='border-default-text-tertiary size-4 shrink-0 animate-spin rounded-full border-t border-r' />
+          ) : (
+            <SvgIcon dataTest={undefined} icon={SendIcon} size={4} />
+          )
+        }
         type='submit'
       >
-        {isSubmitting ? (
-          <div className='border-default-text-tertiary size-4 shrink-0 animate-spin rounded-full border-t border-r' />
-        ) : (
-          <SvgIcon Icon={SendIcon} size={4} />
-        )}
         Soumettre
-      </button>
+      </Button>
     </form>
   );
 };
