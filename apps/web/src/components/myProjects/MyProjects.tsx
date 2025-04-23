@@ -5,8 +5,8 @@ import { PROJECTS_DATA } from '@/constants/data';
 import ExternalLinkIcon from '@/assets/external-link.svg';
 
 import Block from '../common/block/Block';
+import Button from '../common/button/Button';
 import HeroSection from '../common/heroSection/HeroSection';
-import SvgIcon from '../common/svgIcon/SvgIcon';
 
 const MyProjects = () => (
   <Fragment>
@@ -14,15 +14,15 @@ const MyProjects = () => (
     <section className='p-6 md:p-16'>
       {PROJECTS_DATA.map(({ picture, projectUrl, ...otherData }, index) => (
         <Block key={index} picture={{ ...picture, height: 160, width: 160 }} {...otherData}>
-          <a
-            className='btn btn-primary shrink-0'
+          <Button
+            appearance='primary'
+            className={undefined}
             href={projectUrl}
-            rel='noopener noreferrer'
-            target='_blank'
+            icon={ExternalLinkIcon}
+            type='link'
           >
-            <SvgIcon Icon={ExternalLinkIcon} size={4} />
             Voir le projet sur GitHub
-          </a>
+          </Button>
         </Block>
       ))}
     </section>

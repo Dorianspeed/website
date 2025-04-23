@@ -1,10 +1,11 @@
-import { HOME_URL } from '@/constants/globals';
+import { INTERNAL_URLS } from '@/constants/globals';
 
 import HeroSection from '@/components/common/heroSection/HeroSection';
 
 import CircleAlertIcon from '@/assets/circle-alert.svg';
 import HomeIcon from '@/assets/home.svg';
 
+import Button from '../button/Button';
 import SvgIcon from '../svgIcon/SvgIcon';
 
 const NotFound = () => (
@@ -17,10 +18,15 @@ const NotFound = () => (
           La ressource demandée n’a pas été trouvée !
         </h2>
       </div>
-      <a className='btn btn-primary' href={HOME_URL}>
-        <SvgIcon Icon={HomeIcon} size={4} />
+      <Button
+        appearance='primary'
+        className={undefined}
+        href={INTERNAL_URLS.home}
+        icon={HomeIcon}
+        type='link'
+      >
         Retour à l’accueil
-      </a>
+      </Button>
     </div>
   </HeroSection>
 );

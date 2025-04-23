@@ -1,12 +1,12 @@
 import { Fragment } from 'react';
 
-import { CONTACT_URL } from '@/constants/globals';
+import { INTERNAL_URLS } from '@/constants/globals';
 
 import DownloadIcon from '@/assets/download.svg';
 import MailIcon from '@/assets/mail.svg';
 
+import Button from '../common/button/Button';
 import HeroSection from '../common/heroSection/HeroSection';
-import SvgIcon from '../common/svgIcon/SvgIcon';
 import BriefDescription from './briefDescription/BriefDescription';
 import ResumeBlocks from './resumeBlocks/ResumeBlocks';
 import Shortcuts from './shortcuts/Shortcuts';
@@ -15,20 +15,26 @@ const MyResume = () => (
   <Fragment>
     <HeroSection subtitle={undefined} title='Mon CV'>
       <div className='flex flex-col items-center gap-4 md:flex-row'>
-        <button
-          className='btn btn-secondary cursor-pointer'
+        <Button
+          appearance='secondary'
+          className={undefined}
+          icon={DownloadIcon}
           onClick={() => {
-            //TODO do something
+            // TODO do something
           }}
           type='button'
         >
-          <SvgIcon Icon={DownloadIcon} size={4} />
           Téléchargez-moi
-        </button>
-        <a className='btn btn-primary' href={CONTACT_URL}>
-          <SvgIcon Icon={MailIcon} size={4} />
+        </Button>
+        <Button
+          appearance='primary'
+          className={undefined}
+          href={INTERNAL_URLS.contact}
+          icon={MailIcon}
+          type='link'
+        >
           Contactez-moi
-        </a>
+        </Button>
       </div>
     </HeroSection>
     <Shortcuts />

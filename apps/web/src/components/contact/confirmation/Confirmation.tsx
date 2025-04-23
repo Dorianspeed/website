@@ -1,5 +1,6 @@
-import { HOME_URL } from '@/constants/globals';
+import { INTERNAL_URLS } from '@/constants/globals';
 
+import Button from '@/components/common/button/Button';
 import HeroSection from '@/components/common/heroSection/HeroSection';
 import SvgIcon from '@/components/common/svgIcon/SvgIcon';
 
@@ -16,10 +17,15 @@ const Confirmation = () => (
           Je vous répondrai dans les plus brefs délais !
         </h2>
       </div>
-      <a className='btn btn-primary' href={HOME_URL}>
-        <SvgIcon Icon={HomeIcon} size={4} />
+      <Button
+        appearance='primary'
+        className={undefined}
+        href={INTERNAL_URLS.home}
+        icon={HomeIcon}
+        type='link'
+      >
         Retour à l’accueil
-      </a>
+      </Button>
     </div>
   </HeroSection>
 );
