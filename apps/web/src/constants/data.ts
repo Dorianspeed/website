@@ -47,7 +47,7 @@ export const PROJECTS_DATA = [
       'Envoi d’un email avec Nodemailer',
       'Hébergement sur Vercel'
     ],
-    picture: { alt: 'Photo du projet', url: '/avatar.webp' },
+    picture: { alt: 'Photo du projet', url: '/default.webp' },
     projectUrl: 'https://github.com/Dorianspeed/website',
     subtitle: { content: 'Site vitrine présentant mon parcours', element: 'h3' },
     title: { content: 'Website', element: 'h2' }
@@ -99,7 +99,7 @@ export const RESUME_DATA = {
       {
         assetsList: [],
         blockList: [],
-        picture: { alt: 'Logo Opquast', url: '/avatar.webp' },
+        picture: { alt: 'Logo Opquast', url: '/opquast.webp' },
         subtitle: { content: 'Certificat Opquast - Oct. 2020 à Oct. 2025', element: 'h4' },
         title: { content: 'Maîtrise de la qualité en projet web - 845 points', element: 'h3' }
       }
@@ -116,21 +116,21 @@ export const RESUME_DATA = {
           '1 mois de spécialisation (SQL avancé, Sqitch, API GraphQL, MongoDB / Redis, Mocha / Chai)',
           '1 mois de projet (Site type Medium, groupe de 5 personnes)'
         ],
-        picture: { alt: 'Logo O’clock', url: '/avatar.webp' },
+        picture: { alt: 'Logo O’clock', url: '/oclock.webp' },
         subtitle: { content: 'École O’clock', element: 'h4' },
         title: { content: 'Reconversion en développement web', element: 'h3' }
       },
       {
         assetsList: [],
         blockList: [],
-        picture: { alt: 'Logo IUT de Rouen', url: '/avatar.webp' },
+        picture: { alt: 'Logo IUT de Rouen', url: '/iut.webp' },
         subtitle: { content: 'IUT - Rouen - 2009 à 2011', element: 'h4' },
         title: { content: 'Diplôme Universitaire de Technologie Chimie', element: 'h3' }
       },
       {
         assetsList: [],
         blockList: [],
-        picture: { alt: 'Logo Lycée Galilée', url: '/avatar.webp' },
+        picture: { alt: 'Logo Lycée Galilée', url: '/default.webp' },
         subtitle: {
           content: 'Lycée Galilée - Franqueville-Saint-Pierre - 2006 à 2009',
           element: 'h4'
@@ -150,7 +150,7 @@ export const RESUME_DATA = {
           'Réalisation de tests unitaires et end2end (Jest / Cypress)',
           'Participation à l’architecture technique des nouvelles fonctionnalités et au déploiement / suivi des développements]'
         ],
-        picture: { alt: 'Logo Casavo', url: '/avatar.webp' },
+        picture: { alt: 'Logo Casavo', url: '/casavo.webp' },
         subtitle: { content: 'Casavo - CDI - Juil. 2021 à mai 2024', element: 'h4' },
         title: { content: 'Développeur web front-end', element: 'h3' }
       },
@@ -168,7 +168,7 @@ export const RESUME_DATA = {
           'Rédaction de nouveaux protocoles',
           'Analyse des contaminants et pesticides en LC-MS/MS (extractions liquide-liquide et solide-liquide, purification SPE)'
         ],
-        picture: { alt: 'Logo SGS', url: '/avatar.webp' },
+        picture: { alt: 'Logo SGS', url: '/sgs.webp' },
         subtitle: { content: 'SGS France - CDI - Août 2017 à Févr. 2020', element: 'h4' },
         title: { content: 'Technicien chimiste', element: 'h3' }
       },
@@ -181,7 +181,7 @@ export const RESUME_DATA = {
           'Mise en place de nouvelles procédures d’analyse',
           'Étude rhéologique des encres'
         ],
-        picture: { alt: 'Logo Oberthur', url: '/avatar.webp' },
+        picture: { alt: 'Logo Oberthur', url: '/oberthur.webp' },
         subtitle: {
           content: 'Oberthur Fiduciaire SAS - CDI - Déc. 2011 à Juil. 2017',
           element: 'h4'
@@ -198,7 +198,7 @@ export const RESUME_DATA = {
           'Réalisation des contrôles en cours de production',
           'Respect des Bonnes Pratiques de Fabrication (BPF)'
         ],
-        picture: { alt: 'Logo Aptar Pharma', url: '/avatar.webp' },
+        picture: { alt: 'Logo Aptar Pharma', url: '/aptar.webp' },
         subtitle: { content: 'Aptar Pharma - CDD - Juil. 2011 à Août 2011', element: 'h4' },
         title: { content: 'Opérateur contrôleur', element: 'h3' }
       },
@@ -209,7 +209,7 @@ export const RESUME_DATA = {
           'Contrôle des matières premières et des produits finis dans l’industrie cosmétique',
           'Réalisation des tests de teneur en eau (Karl Fischer), d’indice d’iode, de densité, de pH-métrie, de point de fusion, d’indice de réfraction, ...'
         ],
-        picture: { alt: 'Logo Azeo', url: '/avatar.webp' },
+        picture: { alt: 'Logo Azeo', url: '/default.webp' },
         subtitle: { content: 'Azeo - Stage - Févr. 2011 à Avr. 2011', element: 'h4' },
         title: { content: 'Technicien chimiste', element: 'h3' }
       },
@@ -223,7 +223,7 @@ export const RESUME_DATA = {
           'Réalisation des contrôles en cours de production',
           'Respect des Bonnes Pratiques de Fabrication (BPF)'
         ],
-        picture: { alt: 'Logo Aptar Pharma', url: '/avatar.webp' },
+        picture: { alt: 'Logo Aptar Pharma', url: '/aptar.webp' },
         subtitle: { content: 'Aptar Pharma - CDD - Juil. 2010 à Août 2010', element: 'h4' },
         title: { content: 'Opérateur contrôleur', element: 'h3' }
       }
