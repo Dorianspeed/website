@@ -11,7 +11,9 @@
     "prod": "turbo prod",
     "test": "turbo test",
     "test:coverage": "turbo test:coverage",
-    "test:watch": "turbo test:watch"
+    "test:watch": "turbo test:watch",
+    "unused-deps": "yarn knip --include dependencies,optionalPeerDependencies",
+    "unused-exports-and-files": "yarn knip --exclude dependencies,optionalPeerDependencies --fix-type exports,files,types --no-exit-code"
   },
   "packageManager": "yarn@4.9.1",
   "workspaces": [
@@ -22,10 +24,13 @@
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@types/node": "^22.14.1",
     "husky": "^9.1.7",
+    "knip": "^5.50.5",
     "lint-staged": "^15.5.0",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "turbo": "^2.5.0"
+    "turbo": "^2.5.0",
+    "typescript": "^5.8.3"
   }
 }
