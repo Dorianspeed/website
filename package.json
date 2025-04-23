@@ -9,6 +9,7 @@
     "lint": "turbo lint",
     "prepare": "husky",
     "prod": "turbo prod",
+    "sync-deps": "syncpack lint",
     "test": "turbo test",
     "test:coverage": "turbo test:coverage",
     "test:watch": "turbo test:watch",
@@ -30,6 +31,7 @@
     "lint-staged": "^15.5.0",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
+    "syncpack": "^13.0.3",
     "turbo": "^2.5.0",
     "typescript": "^5.8.3"
   }

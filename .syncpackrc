@@ -1,0 +1,18 @@
+{
+  "lintFormatting": false,
+  "semverGroups": [
+    {
+      "dependencies": [
+        "@website/eslint-config",
+        "@website/transactional",
+        "@website/typescript-config"
+      ],
+      "label": "local packages should always match any version",
+      "range": "*"
+    },
+    {
+      "label": "use always caret version instead of tilde / exact versions",
+      "range": "^"
+    }
+  ]
+}
