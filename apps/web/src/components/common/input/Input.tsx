@@ -38,7 +38,7 @@ const Input = <T extends FieldValues>({ autoComplete, control, labels, name }: I
         className={`${error ? 'visible' : 'invisible'} flex h-6 items-center gap-2 text-sm text-red-700`}
         data-testid='input-error'
       >
-        <SvgIcon Icon={TriangleAlertIcon} size={4} />
+        <SvgIcon dataTest={undefined} icon={TriangleAlertIcon} size={4} />
         <p>{error?.message}</p>
       </div>
     </div>

@@ -36,7 +36,7 @@ const Button = (props: PropsWithChildren<ButtonProps>) => {
   const fullClassame = `flex w-fit cursor-pointer items-center gap-2 rounded-lg border p-3 text-base font-normal duration-300 ${BUTTON_STYLES[appearance]} ${className}`;
   const fullChildren = (
     <Fragment>
-      {isValidElement(icon) ? icon : <SvgIcon Icon={icon} size={4} />}
+      {isValidElement(icon) ? icon : <SvgIcon dataTest={undefined} icon={icon} size={4} />}
       {children}
     </Fragment>
   );

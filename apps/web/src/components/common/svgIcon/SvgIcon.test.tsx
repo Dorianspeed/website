@@ -6,7 +6,8 @@ import type { SvgIconProps } from './SvgIcon';
 import SvgIcon from './SvgIcon';
 
 const defaultProps = {
-  Icon: LaptopIcon,
+  dataTest: undefined,
+  icon: LaptopIcon,
   size: 4
 } satisfies SvgIconProps;
 

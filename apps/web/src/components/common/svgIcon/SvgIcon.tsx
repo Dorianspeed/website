@@ -10,12 +10,12 @@ const SVG_SIZES = {
 } satisfies Record<number, string>;
 
 export type SvgIconProps = {
-  dataTest?: string;
-  Icon: SVGElementType;
+  dataTest: string | undefined;
+  icon: SVGElementType;
   size: keyof typeof SVG_SIZES;
 };
 
-const SvgIcon = ({ dataTest = 'svg-icon', Icon, size }: SvgIconProps) => (
+const SvgIcon = ({ dataTest = 'svg-icon', icon: Icon, size }: SvgIconProps) => (
   <div className={`${SVG_SIZES[size]} shrink-0`}>
     <Icon aria-hidden={true} data-testid={dataTest} />
   </div>

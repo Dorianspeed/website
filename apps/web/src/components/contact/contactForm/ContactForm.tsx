@@ -83,7 +83,7 @@ const ContactForm = () => {
           isSubmitting ? (
             <div className='border-default-text-tertiary size-4 shrink-0 animate-spin rounded-full border-t border-r' />
           ) : (
-            <SvgIcon Icon={SendIcon} size={4} />
+            <SvgIcon dataTest={undefined} icon={SendIcon} size={4} />
           )
         }
         type='submit'
