@@ -50,7 +50,7 @@ export type ProjectsDataProps = DefaultBlockProps & {
   projectUrl: string;
 };
 
-export type ResumeDataProps = DefaultBlockProps & { assetsList: Array<string> };
+type ResumeDataProps = DefaultBlockProps & { assetsList: Array<string> };
 
 export type ResumeDataPropsExtended = {
   data: Array<ResumeDataProps>;

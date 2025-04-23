@@ -5,7 +5,7 @@ on: pull_request
 jobs:
   build-and-tests:
     name: Circular deps / Linter / Build / Tests
-    needs: prettier
+    needs: [prettier, unused-deps-exports-files]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -28,7 +28,7 @@ jobs:
 
   commitlint:
     name: Conventionnal commits
-    needs: prettier
+    needs: [prettier, unused-deps-exports-files]
     if: github.event.pull_request.user.login != 'dependabot[bot]'
     runs-on: ubuntu-latest
     steps:
@@ -41,6 +41,7 @@ jobs:
 
   prettier:
     name: Prettier
+    needs: unused-deps-exports-files
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -51,3 +52,18 @@ jobs:
         uses: autofix-ci/action@551dded8c6cc8a1054039c8bc0b8b48c51dfc6ef
         with:
           commit-message: 'chore: apply code formatting'
+
+  unused-deps-exports-files:
+    name: Unused deps / exports / files
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/install_deps
+      - name: Check for unused exports and files
+        run: yarn unused-exports-and-files
+      - name: Commit changes
+        uses: autofix-ci/action@551dded8c6cc8a1054039c8bc0b8b48c51dfc6ef
+        with:
+          commit-message: 'chore: remove unnecessary exports and files'
+      - name: Check for unused deps
+        run: yarn unused-deps
