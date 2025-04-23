@@ -5,7 +5,7 @@ on: pull_request
 jobs:
   build-and-tests:
     name: Circular deps / Linter / Build / Tests
-    needs: [prettier, unused-deps-exports-files]
+    needs: [prettier, unused-deps-exports-files, sync-deps]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -28,7 +28,7 @@ jobs:
 
   commitlint:
     name: Conventionnal commits
-    needs: [prettier, unused-deps-exports-files]
+    needs: [prettier, unused-deps-exports-files, sync-deps]
     if: github.event.pull_request.user.login != 'dependabot[bot]'
     runs-on: ubuntu-latest
     steps:
@@ -52,6 +52,15 @@ jobs:
         uses: autofix-ci/action@551dded8c6cc8a1054039c8bc0b8b48c51dfc6ef
         with:
           commit-message: 'chore: apply code formatting'
+
+  sync-deps:
+    name: Sync deps
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/install_deps
+      - name: Check for mismatching deps version
+        run: yarn sync-deps
 
   unused-deps-exports-files:
     name: Unused deps / exports / files
