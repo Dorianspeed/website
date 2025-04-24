@@ -1,6 +1,6 @@
 import type { SocialMediaItemDataProps } from '@/types/globals';
 
-const SocialMediaItem = ({ icon, label, url }: SocialMediaItemDataProps) => (
+const SocialMediaItem = ({ icon: Icon, label, url }: SocialMediaItemDataProps) => (
   <li role='none'>
     <a
       aria-label={label}
@@ -10,7 +10,7 @@ const SocialMediaItem = ({ icon, label, url }: SocialMediaItemDataProps) => (
       role='menuitem'
       target='_blank'
     >
-      {icon}
+      <Icon aria-hidden={true} data-testid='social-media-icon' />
     </a>
   </li>
 );
