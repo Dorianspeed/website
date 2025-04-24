@@ -2,6 +2,9 @@ name: autofix.ci # Mandatory name for autofix-ci action usage
 
 on: pull_request
 
+permissions:
+  contents: read
+
 jobs:
   build-and-tests:
     name: Circular deps / Linter / Build / Tests
