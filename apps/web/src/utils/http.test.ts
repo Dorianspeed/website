@@ -15,7 +15,7 @@ describe('http', () => {
       const userFetch = fetcher('/user', { method: 'GET' });
 
       await expect(userFetch).resolves.toStrictEqual(mockResponse);
-      expect(fetch).toHaveBeenCalledTimes(1);
+      expect(fetch).toHaveBeenCalledOnce();
       expect(fetch).toHaveBeenCalledWith('/user', { method: 'GET' });
     });
 
@@ -27,7 +27,7 @@ describe('http', () => {
       await expect(userFetch).rejects.toThrowError(
         'Status code 500: an error occured while fetching data'
       );
-      expect(fetch).toHaveBeenCalledTimes(1);
+      expect(fetch).toHaveBeenCalledOnce();
       expect(fetch).toHaveBeenCalledWith('/user', { method: 'GET' });
     });
   });

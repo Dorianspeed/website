@@ -4,7 +4,7 @@ import tsConfigPaths from 'vite-tsconfig-paths';
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
-  plugins: [react(), tsConfigPaths(), svgr({ include: '**/*.svg' })],
+  plugins: [react(), svgr({ include: '**/*.svg' }), tsConfigPaths()],
   test: {
     clearMocks: true,
     coverage: {
