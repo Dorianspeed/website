@@ -10,7 +10,7 @@ export default defineConfig({
       include: ['common/**/*', 'emails/**/*'],
       reporter: ['html', 'text']
     },
-    environment: 'jsdom',
+    environment: 'happy-dom',
     globals: true,
     mockReset: true,
     reporters: ['verbose'],

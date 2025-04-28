@@ -12,7 +12,7 @@ export default defineConfig({
       include: ['src/**/*'],
       reporter: ['html', 'text']
     },
-    environment: 'jsdom',
+    environment: 'happy-dom',
     globals: true,
     mockReset: true,
     reporters: ['verbose'],
