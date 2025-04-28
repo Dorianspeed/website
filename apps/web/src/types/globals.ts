@@ -1,4 +1,4 @@
-import type { HTMLElementType, ReactNode } from 'react';
+import type { HTMLElementType, SVGElementType } from 'react';
 
 export type DefaultBlockProps = {
   blockList: Array<string>;
@@ -30,7 +30,7 @@ export type SiteMapItemsDataProps = {
 export type SiteMapNavList = 'legal' | 'pages';
 
 export type SocialMediaItemDataProps = {
-  icon: ReactNode;
+  icon: SVGElementType;
   label: string;
   position: number;
   url: string;

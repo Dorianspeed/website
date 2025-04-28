@@ -27,7 +27,7 @@
     "@website/eslint-config": "*",
     "@website/typescript-config": "*",
     "eslint": "^9.25.1",
-    "jsdom": "^26.1.0",
+    "happy-dom": "^17.4.4",
     "madge": "^8.0.0",
     "react-email": "^4.0.4",
     "vitest": "^3.1.2"

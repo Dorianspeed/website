@@ -30,7 +30,7 @@ describe('Button', () => {
 
     await userEvent.click(screen.getByRole('button', { name: buttonLabel }));
 
-    expect(mockOnClick).toHaveBeenCalledTimes(1);
+    expect(mockOnClick).toHaveBeenCalledOnce();
   });
 
   it('should render component (type link - external)', () => {

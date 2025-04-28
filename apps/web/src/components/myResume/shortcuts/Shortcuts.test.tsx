@@ -1,10 +1,14 @@
 import { render, screen } from '@testing-library/react';
 
-import Shortcuts from './Shortcuts';
+import Shortcuts, { type ShortcutsProps } from './Shortcuts';
+
+const defaultProps = {
+  sectionRef: { current: null }
+} satisfies ShortcutsProps;
 
 describe('Shortcuts', () => {
   it('should render component', () => {
-    render(<Shortcuts />);
+    render(<Shortcuts {...defaultProps} />);
 
     expect(screen.getByRole('heading', { level: 2, name: '# Raccourcis' })).toBeInTheDocument();
     expect(screen.getByRole('navigation', { name: 'Raccourcis du CV' })).toBeInTheDocument();

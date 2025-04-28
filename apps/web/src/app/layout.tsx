@@ -24,7 +24,7 @@ const RootLayout = ({
 }: Readonly<{
   children: ReactNode;
 }>) => (
-  <html lang='fr'>
+  <html className='scroll-smooth' lang='fr'>
     <body
       className={`bg-default-bg-default text-brand-text-secondary font-sans antialiased ${notoSans.variable}`}
     >

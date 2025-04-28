@@ -55,19 +55,19 @@ export const SITE_MAP_NAV_LIST_LABELS = {
 
 export const SOCIAL_MEDIA_ITEMS_DATA = [
   {
-    icon: <LinkedinIcon aria-hidden={true} />,
+    icon: LinkedinIcon,
     label: 'Ajoutez-moi sur LinkedIn',
     position: 1,
     url: 'https://www.linkedin.com/in/garcia-dorian-dev'
   },
   {
-    icon: <XIcon aria-hidden={true} />,
+    icon: XIcon,
     label: 'Suivez-moi sur X',
     position: 2,
     url: 'https://x.com/Dorian_Speed'
   },
   {
-    icon: <GithubIcon aria-hidden={true} />,
+    icon: GithubIcon,
     label: 'Suivez-moi sur GitHub',
     position: 3,
     url: 'https://github.com/Dorianspeed'
