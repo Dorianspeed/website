@@ -81,13 +81,15 @@ cd website
 yarn install
 ```
 
-3. Start the development server:
+3. Create `.env.local` file in `/apps/web` respecting the `.env.example`
+
+4. Start the development server:
 
 ```bash
 yarn dev
 ```
 
-4. Open your browser and navigate to `http://localhost:3000` (website) or `http://localhost:3001` (transactional emails).
+5. Open your browser and navigate to `http://localhost:3000` (website) or `http://localhost:3001` (transactional emails).
 
 NB: Use filter to start specific project.
 
@@ -151,7 +153,7 @@ To lint project, use:
 yarn lint
 ```
 
-To start project in production mode (do not forget to build before), use:
+To start project in production mode (do not forget to `yarn build` and create a `.env.production` file before running this script), use:
 
 ```bash
 yarn prod

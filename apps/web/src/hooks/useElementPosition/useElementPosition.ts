@@ -13,7 +13,7 @@ const useElementPosition = ({ elementRef, rectPosition }: ElementPositionHookPro
   const handleScroll = () => {
     const currentPosition = elementRef.current?.getBoundingClientRect()[rectPosition] || 0;
 
-    //? Avoid renders when not in this range
+    //* Avoid renders when not in this range
     if (currentPosition > -200 && currentPosition < 200) {
       setElementPosition(currentPosition);
     }
