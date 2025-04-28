@@ -1,36 +1,202 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Website
+
+This is a personal website to showcase my resume, my missions and my projects. There is also a contact form to get in touch.
+
+This project is a monorepo, it uses [Turborepo](https://turborepo.com/) to handle it.
+
+## Table of Contents
+
+- [Personal Website](#personal-website)
+  - [Table of Contents](#table-of-contents)
+  - [Project Overview](#project-overview)
+  - [Requirements](#requirements)
+  - [Recommended VS Code Extensions](#recommended-vs-code-extensions)
+  - [Project Architecture](#project-architecture)
+  - [Getting Started](#getting-started)
+  - [Tests](#tests)
+  - [Other scripts](#other-scripts)
+  - [Contributing](#contributing)
+
+## Project Overview
+
+This website serves as a portfolio to highlight my professional work and achievements. It includes:
+
+- A homepage with some funny quotes.
+- A resume section with my professional experiences, courses & certifications.
+- A missions section.
+- A projects section.
+- A contact form to get in touch.
+
+## Requirements
+
+- [Yarn 4.9.1](https://yarnpkg.com/) (Package Manager)
+- [Node.js 22](https://nodejs.org/)
+
+## Recommended VS Code Extensions
+
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint): Linting for JavaScript and React.
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode): Code formatting.
+- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss): Autocompletion for Tailwind CSS.
+
+## Project Architecture
+
+```
+/.github                    # GitHub workflows
+/.husky                     # Pre-commit hooks
+/.yarn                      # Yarn releases
+/apps
+├── /web                    # Personal website project
+│   ├── /public             # Static images
+│   └── /src
+│       ├── /app            # Routing
+│       ├── /assets         # SVG icons
+│       ├── /components     # Reusable components
+│       ├── /constants      # Variables
+│       ├── /hooks          # Custom hooks
+│       ├── /styles         # Globals CSS
+│       ├── /types          # Globals types
+│       └── /utils          # Utils functions
+/packages
+├── /eslint-config          # Shared ESLint config
+├── /transactional          # Transactional emails
+│   ├── /common             # Reusable components
+│   ├── /constants          # Variables
+│   ├── /emails             # Emails components
+│   └── /types              # Globals types
+└── /typescript-config      # Shared TSConfig
+```
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Dorianspeed/website.git
+cd website
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Start the development server:
 
-## Learn More
+```bash
+yarn dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. Open your browser and navigate to `http://localhost:3000` (website) or `http://localhost:3001` (transactional emails).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+NB: Use filter to start specific project.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+# Start website project
+yarn dev --filter=web
 
-## Deploy on Vercel
+# Start transactional project
+yarn dev --filter=@website/transactional
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Tests
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project use vitest for unit tests.
+
+To run the tests, use the following command:
+
+```bash
+yarn test
+```
+
+To run the tests in watch mode, use:
+
+```bash
+yarn test:watch
+```
+
+To run the tests coverage, use:
+
+```bash
+yarn test:coverage
+```
+
+To run the tests for a specific package, use:
+
+```bash
+# Test website project
+yarn test --filter=web
+
+# Test transactional project
+yarn test --filter=@website/transactional
+```
+
+## Other scripts
+
+To build project, use:
+
+```bash
+yarn build
+```
+
+To check for circular dependencies, use:
+
+```bash
+yarn circular-deps
+```
+
+To lint project, use:
+
+```bash
+yarn lint
+```
+
+To start project in production mode (do not forget to build before), use:
+
+```bash
+yarn prod
+```
+
+To check if dependencies are synchronized, use:
+
+```bash
+yarn sync-deps
+```
+
+To check for unused dependencies, use:
+
+```bash
+yarn unused-deps
+```
+
+To check for unused exports and files, use:
+
+```bash
+yarn unused-exports-and-files
+```
+
+## Contributing
+
+Contributions are welcome! To contribute:
+
+1. Create a new branch for your feature or bug fix:
+
+```bash
+git checkout -b FEATURE/branch-name
+```
+
+2. Make your changes and commit them (respecting the conventionnal commit)
+
+```bash
+git commit -m "feat: add new feature"
+```
+
+3. Push your branch:
+
+```bash
+git push origin FEATURE/branch-name
+```
+
+4. Open a pull request to the main repository
+
+**Please ensure your code follows the project's coding standards and includes appropriate tests where necessary.**
