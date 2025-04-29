@@ -1,5 +1,3 @@
-'use client';
-
 import MyProjects from '@/components/myProjects/MyProjects';
 
 const MyProjectsPage = () => <MyProjects />;

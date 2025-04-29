@@ -1,3 +1,5 @@
+'use client';
+
 import useElementPosition from '@/hooks/useElementPosition/useElementPosition';
 import { Fragment, useRef } from 'react';
 

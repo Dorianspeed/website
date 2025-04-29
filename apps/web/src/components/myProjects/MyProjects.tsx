@@ -1,3 +1,5 @@
+'use client';
+
 import { Fragment } from 'react';
 
 import { PROJECTS_DATA } from '@/constants/data';

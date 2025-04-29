@@ -1,3 +1,5 @@
+'use client';
+
 import { INTERNAL_URLS } from '@/constants/globals';
 
 import HeroSection from '@/components/common/heroSection/HeroSection';
