@@ -30,7 +30,7 @@ This website serves as a portfolio to highlight my professional work and achieve
 ## Requirements
 
 - [Yarn 4.9.1](https://yarnpkg.com/) (Package Manager)
-- [Node.js 22](https://nodejs.org/)
+- [Node.js 22.15.0](https://nodejs.org/)
 
 ## Recommended VS Code Extensions
 
