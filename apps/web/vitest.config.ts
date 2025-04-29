@@ -10,7 +10,8 @@ export default defineConfig({
     coverage: {
       exclude: ['src/app/*', 'src/assets/*', 'src/constants/*', 'src/types/*'],
       include: ['src/**/*'],
-      reporter: ['html', 'text']
+      reporter: ['json-summary', 'text'],
+      reportsDirectory: '../../coverage/web'
     },
     environment: 'happy-dom',
     globals: true,

@@ -8,7 +8,8 @@ export default defineConfig({
     coverage: {
       exclude: ['constants/*', 'types/*'],
       include: ['common/**/*', 'emails/**/*'],
-      reporter: ['html', 'text']
+      reporter: ['json-summary', 'text'],
+      reportsDirectory: '../../coverage/transactional'
     },
     environment: 'happy-dom',
     globals: true,

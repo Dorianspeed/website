@@ -2,9 +2,9 @@
   "name": "@website/transactional",
   "version": "0.0.0",
   "scripts": {
+    "circular-deps": "yarn madge --circular . --extensions ts,tsx",
     "dev": "email dev -p 3001",
     "lint": "yarn eslint",
-    "circular-deps": "yarn madge --circular . --extensions ts,tsx",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest"
