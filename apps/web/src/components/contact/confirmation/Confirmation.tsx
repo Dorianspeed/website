@@ -1,3 +1,5 @@
+'use client';
+
 import { INTERNAL_URLS } from '@/constants/globals';
 
 import Button from '@/components/common/button/Button';

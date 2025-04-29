@@ -1,3 +1,5 @@
+'use client';
+
 import { Fragment } from 'react';
 
 import { QUOTES_DATA } from '@/constants/data';

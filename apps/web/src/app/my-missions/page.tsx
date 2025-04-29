@@ -1,5 +1,3 @@
-'use client';
-
 import MyMissions from '@/components/myMissions/MyMissions';
 
 const MyMissionsPage = () => <MyMissions />;
