@@ -17,10 +17,8 @@ jobs:
       - uses: ./.github/actions/install_deps
       - name: Run make coverage badges
         run: yarn make-coverage-badges
-      - name: Commit changes
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add .
-          git commit -m"docs: update README.md with new tests coverages" || exit 0
-          git push origin main
+      - name: Run prettier
+        run: yarn prettier "README.md" --write
+      - uses: ./.github/actions/commit_changes
+        with:
+          commit-message: 'docs: update README.md with new tests coverages'
