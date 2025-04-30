@@ -5,6 +5,10 @@
     "circular-deps": {},
     "dev": { "cache": false, "persistent": true },
     "lint": {},
+    "make-coverage-badges": {
+      "cache": false,
+      "dependsOn": ["@website/transactional#test:coverage", "test:coverage", "web#test:coverage"]
+    },
     "prod": { "cache": false, "dependsOn": ["build"], "persistent": true },
     "test": { "dependsOn": ["^test"] },
     "test:coverage": {},

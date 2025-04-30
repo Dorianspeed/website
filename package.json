@@ -8,6 +8,7 @@
     "circular-deps": "turbo circular-deps",
     "dev": "turbo dev",
     "lint": "turbo lint",
+    "make-coverage-badges": "turbo make-coverage-badges",
     "prepare": "husky",
     "prod": "turbo prod",
     "sync-deps": "syncpack lint",
