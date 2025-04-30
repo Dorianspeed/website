@@ -14,7 +14,7 @@ This project is a monorepo, it uses [Turborepo](https://turborepo.com/) to handl
   - [Project Architecture](#project-architecture)
   - [Getting Started](#getting-started)
   - [Tests](#tests)
-  - [Tests coverages](#tests-coverages)
+  - [Tests coverage](#tests-coverage)
   - [Other scripts](#other-scripts)
   - [Contributing](#contributing)
 
@@ -134,7 +134,7 @@ yarn test --filter=web
 yarn test --filter=@website/transactional
 ```
 
-## Tests coverages
+## Tests coverage
 
 ## Other scripts
 

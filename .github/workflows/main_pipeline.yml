@@ -1,4 +1,4 @@
-name: autofix.ci # Mandatory name for autofix-ci action usage
+name: Main Pipeline
 
 on:
   push:
@@ -17,7 +17,3 @@ jobs:
       - uses: ./.github/actions/install_deps
       - name: Run make coverage badges
         run: yarn make-coverage-badges
-      - name: Commit changes
-        uses: autofix-ci/action@551dded8c6cc8a1054039c8bc0b8b48c51dfc6ef
-        with:
-          commit-message: 'docs: update README.md with new tests coverages'
