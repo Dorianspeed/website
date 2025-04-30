@@ -1,0 +1,18 @@
+name: Commit changes
+description: Commit changes action to avoid duplication
+inputs:
+  commit-message:
+    default: "chore: apply changes"
+    description: 'Commit message respecting conventionnal commit'
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: Commit changes
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add .
+        git commit -m"${{ inputs.commit-message }}" || exit 0
+        git push origin main
+      shell: bash
