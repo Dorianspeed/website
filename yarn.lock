@@ -3987,6 +3987,19 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@website/make-coverage-badges@workspace:packages/make-coverage-badges":
+  version: 0.0.0-use.local
+  resolution: "@website/make-coverage-badges@workspace:packages/make-coverage-badges"
+  dependencies:
+    "@vitest/coverage-v8": "npm:^3.1.2"
+    "@website/eslint-config": "npm:*"
+    "@website/typescript-config": "npm:*"
+    eslint: "npm:^9.25.1"
+    madge: "npm:^8.0.0"
+    vitest: "npm:^3.1.2"
+  languageName: unknown
+  linkType: soft
+
 "@website/transactional@npm:*, @website/transactional@workspace:packages/transactional":
   version: 0.0.0-use.local
   resolution: "@website/transactional@workspace:packages/transactional"

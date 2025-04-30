@@ -1,0 +1,20 @@
+{
+  "name": "@website/make-coverage-badges",
+  "version": "0.0.0",
+  "scripts": {
+    "circular-deps": "yarn madge --circular ./src --extensions ts",
+    "lint": "yarn eslint",
+    "make-coverage-badges": "npx tsx src/index.ts",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^3.1.2",
+    "@website/eslint-config": "*",
+    "@website/typescript-config": "*",
+    "eslint": "^9.25.1",
+    "madge": "^8.0.0",
+    "vitest": "^3.1.2"
+  }
+}
