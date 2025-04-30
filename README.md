@@ -139,17 +139,17 @@ yarn test --filter=@website/transactional
 <!-- COVERAGES:START -->
 
 **@website/make-coverage-badges**
-| Statements                        | Branches                      | Functions                       | Lines                   |
+| Statements | Branches | Functions | Lines |
 | ----------------------------------| ----------------------------- | --------------------------------| ------------------------|
 | ![Statements](https://img.shields.io/badge/statements-100%25-brightgreen) | ![Branches](https://img.shields.io/badge/branches-100%25-brightgreen) | ![Functions](https://img.shields.io/badge/functions-100%25-brightgreen) | ![Lines](https://img.shields.io/badge/lines-100%25-brightgreen) |
 
 **@website/transactional**
-| Statements                        | Branches                      | Functions                       | Lines                   |
+| Statements | Branches | Functions | Lines |
 | ----------------------------------| ----------------------------- | --------------------------------| ------------------------|
 | ![Statements](https://img.shields.io/badge/statements-100%25-brightgreen) | ![Branches](https://img.shields.io/badge/branches-100%25-brightgreen) | ![Functions](https://img.shields.io/badge/functions-100%25-brightgreen) | ![Lines](https://img.shields.io/badge/lines-100%25-brightgreen) |
 
 **web**
-| Statements                        | Branches                      | Functions                       | Lines                   |
+| Statements | Branches | Functions | Lines |
 | ----------------------------------| ----------------------------- | --------------------------------| ------------------------|
 | ![Statements](https://img.shields.io/badge/statements-100%25-brightgreen) | ![Branches](https://img.shields.io/badge/branches-100%25-brightgreen) | ![Functions](https://img.shields.io/badge/functions-100%25-brightgreen) | ![Lines](https://img.shields.io/badge/lines-100%25-brightgreen) |
 
