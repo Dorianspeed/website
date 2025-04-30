@@ -6,7 +6,7 @@ on:
       - main
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   coverage:
@@ -23,4 +23,4 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add .
           git commit -m"docs: update README.md with new tests coverages" || exit 0
-          git push -f origin main
+          git push origin main
