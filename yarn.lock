@@ -7435,9 +7435,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"knip@npm:^5.51.0":
-  version: 5.51.0
-  resolution: "knip@npm:5.51.0"
+"knip@npm:^5.51.1":
+  version: 5.51.1
+  resolution: "knip@npm:5.51.1"
   dependencies:
     "@nodelib/fs.walk": "npm:^1.2.3"
     easy-table: "npm:1.2.0"
@@ -7459,7 +7459,7 @@ __metadata:
   bin:
     knip: bin/knip.js
     knip-bun: bin/knip-bun.js
-  checksum: 10c0/d6f0f658e418ff45f9a1058eb0543854144af8ba6117180d9d32a22284a66cb0ba19204de758d8578639f07fa531b961e7c415f3600aa590eaf03a070320c16e
+  checksum: 10c0/1b29aef18743571d7c66c8d220f6d2f6f942a1b5c0716d0c1e08b95bf42a3c467c333c3f0943937d10cbed748c8e082dcc06a791238bec879494a4fa08d8bdef
   languageName: node
   linkType: hard
 
@@ -11097,7 +11097,7 @@ __metadata:
     "@trivago/prettier-plugin-sort-imports": "npm:^5.2.2"
     "@types/node": "npm:^22.15.3"
     husky: "npm:^9.1.7"
-    knip: "npm:^5.51.0"
+    knip: "npm:^5.51.1"
     lint-staged: "npm:^15.5.0"
     prettier: "npm:^3.5.3"
     prettier-plugin-tailwindcss: "npm:^0.6.11"
