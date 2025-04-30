@@ -4,12 +4,12 @@ import { exit } from 'node:process';
 import { styleText } from 'node:util';
 
 import {
+  COVERAGES_SECTION_END,
+  COVERAGES_SECTION_START,
   DEFAULT_BREAK_LINE,
   DEFAULT_PROJECTS_DIRECTORY,
   JSON_COVERAGE_FILE,
-  NEXT_SECTION,
-  README_PATH,
-  TEST_COVERAGE_SECTION
+  README_PATH
 } from './constants/globals';
 import type { JSONCoverage, ProjectsCoverageResults } from './types/globals';
 import { generateReadmeTable, getCoverageResults } from './utils/helpers';
@@ -44,11 +44,14 @@ import { generateReadmeTable, getCoverageResults } from './utils/helpers';
   log(styleText('gray', 'Generate new README.md file...'));
   const readmeFile = readFileSync(README_PATH, 'utf-8');
 
-  const testCoverageSectionIndex = readmeFile.indexOf(TEST_COVERAGE_SECTION);
-  const nextSectionIndex = readmeFile.indexOf(NEXT_SECTION);
+  const coveragesSectionStartIndex = readmeFile.indexOf(COVERAGES_SECTION_START);
+  const coveragesSectionEndIndex = readmeFile.indexOf(COVERAGES_SECTION_END);
 
-  const readmeStart = readmeFile.slice(0, testCoverageSectionIndex + TEST_COVERAGE_SECTION.length);
-  const readmeEnd = readmeFile.slice(nextSectionIndex);
+  const readmeStart = readmeFile.slice(
+    0,
+    coveragesSectionStartIndex + COVERAGES_SECTION_START.length
+  );
+  const readmeEnd = readmeFile.slice(coveragesSectionEndIndex);
   const readmeTables = Object.entries(projectsCoverageResults).map(([project, coverageResults]) =>
     generateReadmeTable(project, coverageResults)
   );
