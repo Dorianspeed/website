@@ -3,7 +3,7 @@ export const DEFAULT_PROJECTS_DIRECTORY = '../../coverage';
 export const JSON_COVERAGE_FILE = 'coverage-summary.json';
 export const NEXT_SECTION = '## Other scripts';
 export const README_PATH = '../../README.md';
-export const TEST_COVERAGE_SECTION = '## Tests coverages';
+export const TEST_COVERAGE_SECTION = '## Tests coverage';
 
 export const PROJECTS_LABELS = {
   'make-coverage-badges': '@website/make-coverage-badges',
