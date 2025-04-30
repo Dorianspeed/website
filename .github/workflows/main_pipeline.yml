@@ -14,11 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/actions/install_deps
+      - name: Install dependencies
+        uses: ./.github/actions/install_deps
       - name: Run make coverage badges
         run: yarn make-coverage-badges
       - name: Run prettier
         run: yarn prettier "README.md" --write
-      - uses: ./.github/actions/commit_changes
+      - name: Commit changes
+        uses: ./.github/actions/commit_changes
         with:
-          commit-message: 'docs: update README.md with new tests coverages'
+          commit-message: "docs: update README.md with new tests coverages"
