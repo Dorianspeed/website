@@ -59,6 +59,11 @@ This website serves as a portfolio to highlight my professional work and achieve
 │       └── /utils          # Utils functions
 /packages
 ├── /eslint-config          # Shared ESLint config
+├── /make-coverage-badges   # Coverage badges script
+│   └── /src                # Globals types
+│       ├── /constants      # Variables
+│       ├── /types          # Globals types
+│       └── /utils          # Utils functions
 ├── /transactional          # Transactional emails
 │   ├── /common             # Reusable components
 │   ├── /constants          # Variables
@@ -173,6 +178,12 @@ To lint project, use:
 
 ```bash
 yarn lint
+```
+
+To generate coverage badges directly in README.md (automated process in GitHub Actions):
+
+```bash
+yarn make-coverage-badges
 ```
 
 To start project in production mode (do not forget to `yarn build` and create a `.env.production` file before running this script), use:
