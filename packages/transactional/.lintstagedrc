@@ -1,4 +1,4 @@
 {
   "!(*.png)": "prettier --write",
-  "*.{ts,tsx}": "eslint"
+  "./src/**/*.{ts,tsx}": "eslint"
 }

@@ -6,8 +6,8 @@ export default defineConfig({
   test: {
     clearMocks: true,
     coverage: {
-      exclude: ['constants/*', 'types/*'],
-      include: ['common/**/*', 'emails/**/*'],
+      exclude: ['src/constants/*', 'src/types/*'],
+      include: ['src/common/**/*', 'src/emails/**/*'],
       reporter: ['json-summary', 'text'],
       reportsDirectory: '../../coverage/transactional'
     },

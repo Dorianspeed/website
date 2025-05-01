@@ -1,9 +1,13 @@
 {
   "name": "@website/transactional",
   "version": "0.0.0",
+  "exports": {
+    "./contactRequest": "./src/emails/contactRequest/ContactRequest.tsx",
+    "./receiptConfirmation": "./src/emails/receiptConfirmation/ReceiptConfirmation.tsx"
+  },
   "scripts": {
-    "circular-deps": "yarn madge --circular . --extensions ts,tsx",
-    "dev": "email dev -p 3001",
+    "circular-deps": "yarn madge --circular ./src --extensions ts,tsx",
+    "dev": "email dev -d ./src/emails -p 3001",
     "lint": "yarn eslint",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",

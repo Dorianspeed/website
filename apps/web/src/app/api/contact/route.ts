@@ -1,6 +1,6 @@
 import { render } from '@react-email/render';
-import ContactRequest from '@website/transactional/emails/contactRequest/ContactRequest';
-import ReceiptConfirmation from '@website/transactional/emails/receiptConfirmation/ReceiptConfirmation';
+import ContactRequest from '@website/transactional/contactRequest';
+import ReceiptConfirmation from '@website/transactional/receiptConfirmation';
 import { createTransport, getTestMessageUrl } from 'nodemailer';
 import sanitizeHtml from 'sanitize-html';
 
