@@ -1,9 +1,11 @@
-name: autofix.ci # Mandatory name for autofix-ci action usage
+name: PR Pipeline
 
-on: pull_request
+on: 
+  pull_request:
+    types: [edited, opened, reopened, synchronize]
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build-and-tests:
@@ -19,7 +21,8 @@ jobs:
           key: ${{ runner.os }}-turbo-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-turbo-
-      - uses: ./.github/actions/install_deps
+      - name: Install dependencies
+        uses: ./.github/actions/install_deps
       - name: Run circular deps
         run: yarn circular-deps
       - name: Run linter
@@ -30,15 +33,16 @@ jobs:
         run: yarn test
 
   commitlint:
+    if: github.event.pull_request.user.login != 'dependabot[bot]'
     name: Conventionnal commits
     needs: [prettier, unused-deps-exports-files, sync-deps]
-    if: github.event.pull_request.user.login != 'dependabot[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: ./.github/actions/install_deps
+      - name: Install dependencies
+        uses: ./.github/actions/install_deps
       - name: Check conventionnal commits
         run: yarn commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
 
@@ -48,20 +52,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/actions/install_deps
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          token: ${{ secrets.GH_ACTIONS_PAT }}
+      - name: Install dependencies
+        uses: ./.github/actions/install_deps
       - name: Run prettier
         run: yarn prettier "./**/*.{ts,tsx}" --write
       - name: Commit changes
-        uses: autofix-ci/action@551dded8c6cc8a1054039c8bc0b8b48c51dfc6ef
+        uses: ./.github/actions/commit_changes
         with:
-          commit-message: 'chore: apply code formatting'
+          commit-message: "chore: apply code formatting"
 
   sync-deps:
     name: Sync deps
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/actions/install_deps
+      - name: Install dependencies
+        uses: ./.github/actions/install_deps
       - name: Check for mismatching deps version
         run: yarn sync-deps
 
@@ -70,12 +79,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/actions/install_deps
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          token: ${{ secrets.GH_ACTIONS_PAT }}
+      - name: Install dependencies
+        uses: ./.github/actions/install_deps
       - name: Check for unused exports and files
         run: yarn unused-exports-and-files
       - name: Commit changes
-        uses: autofix-ci/action@551dded8c6cc8a1054039c8bc0b8b48c51dfc6ef
+        uses: ./.github/actions/commit_changes
         with:
-          commit-message: 'chore: remove unnecessary exports and files'
+          commit-message: "chore: remove unnecessary exports and files"
       - name: Check for unused deps
         run: yarn unused-deps
