@@ -1,6 +1,6 @@
 name: PR Pipeline
 
-on: 
+on:
   pull_request:
     types: [edited, opened, reopened, synchronize]
 
@@ -62,7 +62,7 @@ jobs:
       - name: Commit changes
         uses: ./.github/actions/commit_changes
         with:
-          commit-message: "chore: apply code formatting"
+          commit-message: 'chore: apply code formatting'
 
   sync-deps:
     name: Sync deps
@@ -89,6 +89,6 @@ jobs:
       - name: Commit changes
         uses: ./.github/actions/commit_changes
         with:
-          commit-message: "chore: remove unnecessary exports and files"
+          commit-message: 'chore: remove unnecessary exports and files'
       - name: Check for unused deps
         run: yarn unused-deps

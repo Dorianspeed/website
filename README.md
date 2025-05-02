@@ -135,6 +135,9 @@ To run the tests for a specific package, use:
 # Test website project
 yarn test --filter=web
 
+# Test make-coverage-badges project
+yarn test --filter=@website/make-coverage-badges
+
 # Test transactional project
 yarn test --filter=@website/transactional
 ```

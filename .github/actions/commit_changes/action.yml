@@ -2,7 +2,7 @@ name: Commit changes
 description: Commit changes action to avoid duplication
 inputs:
   commit-message:
-    default: "chore: apply changes"
+    default: 'chore: apply changes'
     description: Commit message respecting conventionnal commit
     required: true
 runs:
