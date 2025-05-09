@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   build-and-tests:
-    if: ${{ failure() && github.event.pull_request.user.login == 'dependabot[bot]' || success() }}
+    if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' && always() || success() }}
     name: Circular deps / Linter / Build / Tests
     needs: [prettier, unused-deps-exports-files, sync-deps]
     runs-on: ubuntu-latest
