@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@react-email/components": "^0.0.39",
-    "html-react-parser": "^5.2.4",
+    "html-react-parser": "^5.2.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
@@ -30,7 +30,7 @@
     "@website/eslint-config": "*",
     "@website/typescript-config": "*",
     "eslint": "^9.26.0",
-    "happy-dom": "^17.4.6",
+    "happy-dom": "^17.4.7",
     "madge": "^8.0.0",
     "react-email": "^4.0.13",
     "vitest": "^3.1.3"

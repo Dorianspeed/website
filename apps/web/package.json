@@ -43,7 +43,7 @@
     "@website/eslint-config": "*",
     "@website/typescript-config": "*",
     "eslint": "^9.26.0",
-    "happy-dom": "^17.4.6",
+    "happy-dom": "^17.4.7",
     "madge": "^8.0.0",
     "vite-plugin-svgr": "^4.3.0",
     "vite-tsconfig-paths": "^5.1.4",
