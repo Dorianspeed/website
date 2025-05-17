@@ -1,9 +1,13 @@
 import { render, screen } from '@testing-library/react';
+import { randomUUID } from 'crypto';
 
 import Tags, { type TagsProps } from './Tags';
 
 const defaultProps = {
-  tags: ['Hello', 'Welcome']
+  tags: [
+    { indexKey: randomUUID(), item: 'Hello' },
+    { indexKey: randomUUID(), item: 'Welcome' }
+  ]
 } satisfies TagsProps;
 
 describe('Tags', () => {

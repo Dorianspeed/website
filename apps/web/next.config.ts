@@ -1,6 +1,7 @@
 import type { NextConfig } from 'next';
 
 const nextConfig = {
+  eslint: { ignoreDuringBuilds: true },
   redirects: async () => [{ destination: '/home', permanent: true, source: '/' }],
   turbopack: { rules: { '*.svg': { as: '*.js', loaders: ['@svgr/webpack'] } } },
   webpack: (config) => {

@@ -30,8 +30,8 @@ const Home = () => (
         Des avis véridiques comme on en a jamais vu !
       </h4>
       <div className='grid-auto-fit-64 md:grid-auto-fit-80 mt-12 grid gap-6 md:gap-12'>
-        {QUOTES_DATA.map((data, index) => (
-          <QuoteBlock key={index} {...data} />
+        {QUOTES_DATA.map((data) => (
+          <QuoteBlock key={data.indexKey} {...data} />
         ))}
       </div>
     </section>

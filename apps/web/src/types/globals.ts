@@ -1,7 +1,9 @@
+import type { UUID } from 'crypto';
 import type { HTMLElementType, SVGElementType } from 'react';
 
 export type DefaultBlockProps = {
-  blockList: Array<string>;
+  blockList: Array<ListItemProps>;
+  indexKey: UUID;
   picture: PictureProps;
   subtitle: TitleProps;
   title: TitleProps;
@@ -10,6 +12,11 @@ export type DefaultBlockProps = {
 export type FormLabelsProps = {
   label: string;
   placeholder: string;
+};
+
+export type ListItemProps = {
+  indexKey: UUID;
+  item: string;
 };
 
 export type MissionsDataProps = DefaultBlockProps & {
@@ -50,7 +57,7 @@ export type ProjectsDataProps = DefaultBlockProps & {
   projectUrl: string;
 };
 
-type ResumeDataProps = DefaultBlockProps & { assetsList: Array<string> };
+type ResumeDataProps = DefaultBlockProps & { assetsList: Array<ListItemProps> };
 
 export type ResumeDataPropsExtended = {
   data: Array<ResumeDataProps>;
