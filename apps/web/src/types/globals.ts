@@ -3,7 +3,7 @@ import type { HTMLElementType, SVGElementType } from 'react';
 
 export type DefaultBlockProps = {
   blockList: Array<ListItemProps>;
-  indexKey: UUID;
+  id: UUID;
   picture: PictureProps;
   subtitle: TitleProps;
   title: TitleProps;
@@ -15,7 +15,7 @@ export type FormLabelsProps = {
 };
 
 export type ListItemProps = {
-  indexKey: UUID;
+  id: UUID;
   item: string;
 };
 

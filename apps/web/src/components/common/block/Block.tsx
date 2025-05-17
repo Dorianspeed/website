@@ -40,8 +40,8 @@ const Block = ({
                 className='text-default-text-tertiary list-inside list-disc text-base font-normal'
                 role='list'
               >
-                {blockList.map(({ indexKey, item }) => (
-                  <li key={indexKey} role='listitem'>
+                {blockList.map(({ id, item }) => (
+                  <li key={id} role='listitem'>
                     {item}
                   </li>
                 ))}

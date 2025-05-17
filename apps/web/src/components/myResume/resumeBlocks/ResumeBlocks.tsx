@@ -17,7 +17,7 @@ const ResumeBlocks = () => (
           </h2>
           {data.map(({ assetsList, picture, ...otherData }) => (
             <Block
-              key={otherData.indexKey}
+              key={otherData.id}
               picture={{ ...picture, height: 160, width: 160 }}
               {...otherData}
             >

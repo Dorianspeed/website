@@ -8,8 +8,8 @@ export type TagsProps = {
 
 const Tags = ({ tags }: TagsProps) => (
   <div className='flex flex-wrap gap-4'>
-    {tags.map(({ indexKey, item }) => (
-      <Tag appearance='primary' key={indexKey} tag={item} />
+    {tags.map(({ id, item }) => (
+      <Tag appearance='primary' key={id} tag={item} />
     ))}
   </div>
 );

@@ -5,8 +5,8 @@ import Tags, { type TagsProps } from './Tags';
 
 const defaultProps = {
   tags: [
-    { indexKey: randomUUID(), item: 'Hello' },
-    { indexKey: randomUUID(), item: 'Welcome' }
+    { id: randomUUID(), item: 'Hello' },
+    { id: randomUUID(), item: 'Welcome' }
   ]
 } satisfies TagsProps;
 
