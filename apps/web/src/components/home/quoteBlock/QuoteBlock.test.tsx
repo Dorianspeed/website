@@ -7,7 +7,7 @@ const quoteBlockProps = {
   author: 'Dorian',
   authorJob: 'Dev',
   avatarUrl: '/image.png',
-  indexKey: randomUUID(),
+  id: randomUUID(),
   quote: 'Unbelievable !'
 } satisfies QuoteBlockProps;
 

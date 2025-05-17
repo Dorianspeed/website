@@ -5,7 +5,7 @@ export type QuoteBlockProps = {
   author: string;
   authorJob: string;
   avatarUrl: string;
-  indexKey: UUID;
+  id: UUID;
   quote: string;
 };
 
