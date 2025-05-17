@@ -40,6 +40,20 @@ describe('Helpers', () => {
 | ----------------------------------| ----------------------------- | --------------------------------| ------------------------|
 | ![Statements](https://img.shields.io/badge/statements-90%25-brightgreen) | ![Branches](https://img.shields.io/badge/branches-100%25-brightgreen) | ![Functions](https://img.shields.io/badge/functions-50%25-red) | ![Lines](https://img.shields.io/badge/lines-80%25-yellow) |`);
     });
+
+    it('should return default project key when project label is not found', () => {
+      expect(
+        generateReadmeTable('new-package', {
+          branches: 100,
+          functions: 50,
+          lines: 80,
+          statements: 90
+        })
+      ).toStrictEqual(`**new-package**
+| Statements                        | Branches                      | Functions                       | Lines                   |
+| ----------------------------------| ----------------------------- | --------------------------------| ------------------------|
+| ![Statements](https://img.shields.io/badge/statements-90%25-brightgreen) | ![Branches](https://img.shields.io/badge/branches-100%25-brightgreen) | ![Functions](https://img.shields.io/badge/functions-50%25-red) | ![Lines](https://img.shields.io/badge/lines-80%25-yellow) |`);
+    });
   });
 
   describe('getCoverageResults', () => {
