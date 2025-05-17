@@ -15,8 +15,12 @@ const ResumeBlocks = () => (
           <h2 className='text-2xl font-semibold'>
             {RESUME_SECTION_LABELS[section as ResumeSections]}
           </h2>
-          {data.map(({ assetsList, picture, ...otherData }, index) => (
-            <Block key={index} picture={{ ...picture, height: 160, width: 160 }} {...otherData}>
+          {data.map(({ assetsList, picture, ...otherData }) => (
+            <Block
+              key={otherData.indexKey}
+              picture={{ ...picture, height: 160, width: 160 }}
+              {...otherData}
+            >
               {Boolean(assetsList.length) && <Tags tags={assetsList} />}
             </Block>
           ))}

@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import { randomUUID } from 'crypto';
 
 import QuoteBlock, { type QuoteBlockProps } from './QuoteBlock';
 
@@ -6,6 +7,7 @@ const quoteBlockProps = {
   author: 'Dorian',
   authorJob: 'Dev',
   avatarUrl: '/image.png',
+  indexKey: randomUUID(),
   quote: 'Unbelievable !'
 } satisfies QuoteBlockProps;
 

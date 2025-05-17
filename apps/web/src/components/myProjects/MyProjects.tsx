@@ -14,8 +14,12 @@ const MyProjects = () => (
   <Fragment>
     <HeroSection subtitle={undefined} title='Mes projets' />
     <section className='p-6 md:p-16'>
-      {PROJECTS_DATA.map(({ picture, projectUrl, ...otherData }, index) => (
-        <Block key={index} picture={{ ...picture, height: 160, width: 160 }} {...otherData}>
+      {PROJECTS_DATA.map(({ picture, projectUrl, ...otherData }) => (
+        <Block
+          key={otherData.indexKey}
+          picture={{ ...picture, height: 160, width: 160 }}
+          {...otherData}
+        >
           <Button
             appearance='primary'
             className={undefined}

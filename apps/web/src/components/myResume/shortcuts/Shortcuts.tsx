@@ -20,8 +20,8 @@ const Shortcuts = ({ sectionRef }: ShortcutsProps) => {
           className='text-default-text-secondary flex list-inside list-decimal flex-col gap-2 text-xl font-normal'
           role='menubar'
         >
-          {sortedShortcutsItem.map((data, index) => (
-            <ShortcutsItem key={index} {...data} />
+          {sortedShortcutsItem.map((data) => (
+            <ShortcutsItem key={data.position} {...data} />
           ))}
         </ol>
       </nav>

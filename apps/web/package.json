@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build --no-lint",
+    "build": "next build",
     "circular-deps": "yarn madge --circular ./src --extensions ts,tsx",
     "dev": "next dev -p 3000 --turbopack",
     "lint": "yarn eslint",

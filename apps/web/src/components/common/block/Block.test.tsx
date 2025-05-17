@@ -1,9 +1,14 @@
 import { render, screen } from '@testing-library/react';
+import { randomUUID } from 'crypto';
 
 import Block, { type BlockProps } from './Block';
 
 const defaultProps = {
-  blockList: ['React', 'Typescript'],
+  blockList: [
+    { indexKey: randomUUID(), item: 'React' },
+    { indexKey: randomUUID(), item: 'Typescript' }
+  ],
+  indexKey: randomUUID(),
   picture: { alt: 'Project picture', height: 40, url: '/avatar.webp', width: 40 },
   subtitle: { content: 'Here is a project', element: 'h3' },
   title: { content: 'Website', element: 'h2' }

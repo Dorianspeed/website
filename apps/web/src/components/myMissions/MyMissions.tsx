@@ -14,8 +14,12 @@ const MyMissions = () => (
   <Fragment>
     <HeroSection subtitle={undefined} title='Mes missions' />
     <section className='grid-auto-fit-64 md:grid-auto-fit-80 grid gap-12 p-6 md:p-16'>
-      {MISSIONS_DATA.map(({ companyUrl, picture, ...otherData }, index) => (
-        <Block key={index} picture={{ ...picture, height: 120, width: 120 }} {...otherData}>
+      {MISSIONS_DATA.map(({ companyUrl, picture, ...otherData }) => (
+        <Block
+          key={otherData.indexKey}
+          picture={{ ...picture, height: 120, width: 120 }}
+          {...otherData}
+        >
           <Button
             appearance='primary'
             className={undefined}
