@@ -16,7 +16,7 @@ export const getBadgeColor = (value: number) => {
 };
 
 export const generateReadmeTable = (projectKey: string, coverageResults: CoverageResults) => {
-  const projectLabel = PROJECTS_LABELS[projectKey as ProjectsLabels];
+  const projectLabel = PROJECTS_LABELS[projectKey as ProjectsLabels] || projectKey;
 
   const branchesBadge = generateBadge('branches', coverageResults['branches']);
   const functionsBadge = generateBadge('functions', coverageResults['functions']);
