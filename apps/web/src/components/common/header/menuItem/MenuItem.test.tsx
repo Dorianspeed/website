@@ -46,9 +46,7 @@ describe('MenuItem', () => {
   it('should trigger onNavigate when item is clicked', async () => {
     render(<MenuItem {...menuItemProps} />);
 
-    // Simulate the navigation
     await userEvent.click(screen.getByRole('menuitem', { name: 'Accueil' }));
-    vi.spyOn(navigation, 'usePathname').mockReturnValue('/home');
 
     expect(onNavigateMock).toHaveBeenCalledOnce();
   });
