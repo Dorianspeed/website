@@ -1,11 +1,10 @@
-import type { UUID } from 'crypto';
 import Image from 'next/image';
 
 export type QuoteBlockProps = {
   author: string;
   authorJob: string;
   avatarUrl: string;
-  id: UUID;
+  id: string;
   quote: string;
 };
 
