@@ -3,6 +3,8 @@ import { type Control, type FieldPath, type FieldValues, useController } from 'r
 
 import type { FormLabelsProps } from '@/types/globals';
 
+import { TEXTAREA_MAX_LENGTH } from '@/components/contact/contactForm/ContactForm.schema';
+
 import TriangleAlertIcon from '@/assets/triangle-alert.svg';
 
 import SvgIcon from '../svgIcon/SvgIcon';
@@ -19,23 +21,38 @@ const Textarea = <T extends FieldValues>({ control, labels, name }: TextareaProp
     fieldState: { error }
   } = useController({ control, name });
 
-  const htmlFor = useId();
+  const htmlForId = useId();
+  const charCounter = useId();
 
+  const textareaCount = TEXTAREA_MAX_LENGTH - (field?.value.length || 0);
+  const remainingCharsMessage = `${textareaCount > 0 ? textareaCount : 0} ${textareaCount > 1 ? 'caractères restants' : 'caractère restant'} sur ${TEXTAREA_MAX_LENGTH}`;
   const { label, placeholder } = labels[name];
 
   return (
     <div className='flex w-full flex-col gap-2'>
-      <label htmlFor={htmlFor}>{label}</label>
+      <label htmlFor={htmlForId}>{label}</label>
       <textarea
+        aria-describedby={`charCounter-${charCounter}`}
         aria-invalid={!!error}
         className={`border-default-border placeholder:text-default-text-tertiary rounded-lg border px-4 py-3 ${error ? 'border-red-700 text-red-700 focus:outline-red-700' : ''}`}
-        id={htmlFor}
+        id={htmlForId}
         lang='fr'
         placeholder={placeholder}
         rows={5}
         spellCheck={true}
         {...field}
       />
+      <p aria-hidden={true} className='self-end' data-testid='charCounter'>
+        {remainingCharsMessage}
+      </p>
+      <p
+        className='sr-only'
+        data-testid='sr-charCounter'
+        id={`charCounter-${charCounter}`}
+        role='status'
+      >
+        {remainingCharsMessage}
+      </p>
       <div
         className={`${error ? 'visible' : 'invisible'} flex h-6 items-center gap-2 text-sm text-red-700`}
         data-testid='textarea-error'
