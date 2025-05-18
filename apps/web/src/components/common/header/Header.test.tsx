@@ -1,4 +1,3 @@
-import * as navigation from 'next/navigation';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
@@ -50,9 +49,25 @@ describe('Header', () => {
 
     expect(screen.getByTestId('cross-icon')).toBeInTheDocument();
 
-    // Simulate the navigation
     await userEvent.click(screen.getByRole('menuitem', { name: 'Mon CV' }));
-    vi.spyOn(navigation, 'usePathname').mockReturnValue('/my-resume');
+
+    expect(screen.getByTestId('burger-icon')).toBeInTheDocument();
+  });
+
+  it('should close menu when clicking outside header', async () => {
+    render(
+      <main data-testid='outside'>
+        <Header />
+      </main>
+    );
+
+    expect(screen.getByTestId('burger-icon')).toBeInTheDocument();
+
+    await userEvent.click(screen.getByRole('button', { name: 'Menu' }));
+
+    expect(screen.getByTestId('cross-icon')).toBeInTheDocument();
+
+    await userEvent.click(screen.getByTestId('outside'));
 
     expect(screen.getByTestId('burger-icon')).toBeInTheDocument();
   });

@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import useOnClickOutside from '@/hooks/useOnClickOutside/useOnClickOutside';
+import { useRef, useState } from 'react';
 
 import { MENU_ITEMS_DATA } from '@/constants/globals';
 
@@ -15,11 +16,19 @@ const MOBILE_SVG_SIZE = 9;
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const headerRef = useRef<HTMLElement>(null);
+
+  const closeMenu = () => setIsMenuOpen(false);
+
+  useOnClickOutside(headerRef, closeMenu);
 
   const orderedMenuItemsData = [...MENU_ITEMS_DATA].sort((a, b) => a.position - b.position);
 
   return (
-    <header className='border-default-border bg-default-bg-default fixed top-0 w-full justify-between border-b p-6 md:relative md:flex md:flex-row md:items-center md:px-8 md:py-9'>
+    <header
+      className='border-default-border bg-default-bg-default fixed top-0 w-full justify-between border-b p-6 md:relative md:flex md:flex-row md:items-center md:px-8 md:py-9'
+      ref={headerRef}
+    >
       <SvgIcon dataTest='laptop-icon' icon={LaptopIcon} size={10} />
       <nav aria-label='Menu principal' role='navigation'>
         <button
@@ -42,7 +51,7 @@ const Header = () => {
           role='menubar'
         >
           {orderedMenuItemsData.map((data) => (
-            <MenuItem key={data.url} onNavigate={() => setIsMenuOpen(false)} {...data} />
+            <MenuItem key={data.url} onNavigate={closeMenu} {...data} />
           ))}
         </ul>
       </nav>
