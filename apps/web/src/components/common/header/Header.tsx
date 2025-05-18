@@ -42,7 +42,7 @@ const Header = () => {
           role='menubar'
         >
           {orderedMenuItemsData.map((data) => (
-            <MenuItem key={data.url} {...data} />
+            <MenuItem key={data.url} onNavigate={() => setIsMenuOpen(false)} {...data} />
           ))}
         </ul>
       </nav>

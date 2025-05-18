@@ -1,20 +1,22 @@
 import * as navigation from 'next/navigation';
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
-import type { NavItemDataProps } from '@/types/globals';
-
-import MenuItem from './MenuItem';
+import MenuItem, { type MenuItemProps } from './MenuItem';
 
 vi.mock('next/navigation', async () => ({
   ...(await vi.importActual('next/navigation')),
   usePathname: () => '/'
 }));
 
+const onNavigateMock = vi.fn();
+
 const menuItemProps = {
   label: 'Accueil',
+  onNavigate: onNavigateMock,
   position: 1,
   url: '/home'
-} satisfies NavItemDataProps;
+} satisfies MenuItemProps;
 
 describe('MenuItem', () => {
   it('should render component', () => {
@@ -39,5 +41,15 @@ describe('MenuItem', () => {
       'aria-current',
       'page'
     );
+  });
+
+  it('should trigger onNavigate when item is clicked', async () => {
+    render(<MenuItem {...menuItemProps} />);
+
+    // Simulate the navigation
+    await userEvent.click(screen.getByRole('menuitem', { name: 'Accueil' }));
+    vi.spyOn(navigation, 'usePathname').mockReturnValue('/home');
+
+    expect(onNavigateMock).toHaveBeenCalledOnce();
   });
 });
