@@ -1,9 +1,8 @@
-import type { UUID } from 'crypto';
 import type { HTMLElementType, SVGElementType } from 'react';
 
 export type DefaultBlockProps = {
   blockList: Array<ListItemProps>;
-  id: UUID;
+  id: string;
   picture: PictureProps;
   subtitle: TitleProps;
   title: TitleProps;
@@ -15,7 +14,7 @@ export type FormLabelsProps = {
 };
 
 export type ListItemProps = {
-  id: UUID;
+  id: string;
   item: string;
 };
 

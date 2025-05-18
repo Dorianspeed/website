@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { randomUUID } from 'crypto';
+import { v4 as randomUUID } from 'uuid';
 
 import Block, { type BlockProps } from './Block';
 
