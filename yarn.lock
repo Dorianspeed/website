@@ -3275,12 +3275,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^22.15.19":
-  version: 22.15.19
-  resolution: "@types/node@npm:22.15.19"
+"@types/node@npm:^22.15.21":
+  version: 22.15.21
+  resolution: "@types/node@npm:22.15.21"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10c0/8ef52fa1a91b1c8891616d46f3921a9f3c65ad1c6bb62db7899c8c28643c13bf9d607a2403b1e5aceb3e6fa6749efc9e0ba5c39618a4872da6946437b0edbfbe
+  checksum: 10c0/f092bbccda2131c2b2c8f720338080aa0ef1d928f5f1062c03954a4f7dafa7ee3ed29bc3e51bd4e2584473b3d943c637a2b39ad7174898970818270187cf10c1
   languageName: node
   linkType: hard
 
@@ -7000,9 +7000,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"knip@npm:^5.56.0":
-  version: 5.56.0
-  resolution: "knip@npm:5.56.0"
+"knip@npm:^5.57.0":
+  version: 5.57.0
+  resolution: "knip@npm:5.57.0"
   dependencies:
     "@nodelib/fs.walk": "npm:^1.2.3"
     fast-glob: "npm:^3.3.3"
@@ -7023,7 +7023,7 @@ __metadata:
   bin:
     knip: bin/knip.js
     knip-bun: bin/knip-bun.js
-  checksum: 10c0/434fc8962f0d42faaa001ccda0fd2f78503a453acc69254de49103fe02224f4e74950766c6c441af8217b6f9fa0d7e7907c2eb8c0c2fcc7ef9b663293e9639b0
+  checksum: 10c0/3c472f8aaa116aff88c96e9f7edc1403aefbb306f3749917533faa175fd1dbb41b1f9aa4c9f5e06e9ff48c559bc7f8cb0a999e6d768762febdd6f88d1d6fb8c9
   languageName: node
   linkType: hard
 
@@ -10580,7 +10580,7 @@ __metadata:
     vite-plugin-svgr: "npm:^4.3.0"
     vite-tsconfig-paths: "npm:^5.1.4"
     vitest: "npm:^3.1.4"
-    zod: "npm:^3.25.7"
+    zod: "npm:^3.25.13"
   languageName: unknown
   linkType: soft
 
@@ -10598,9 +10598,9 @@ __metadata:
     "@commitlint/cli": "npm:^19.8.1"
     "@commitlint/config-conventional": "npm:^19.8.1"
     "@trivago/prettier-plugin-sort-imports": "npm:^5.2.2"
-    "@types/node": "npm:^22.15.19"
+    "@types/node": "npm:^22.15.21"
     husky: "npm:^9.1.7"
-    knip: "npm:^5.56.0"
+    knip: "npm:^5.57.0"
     lint-staged: "npm:^16.0.0"
     prettier: "npm:^3.5.3"
     prettier-plugin-tailwindcss: "npm:^0.6.11"
@@ -10870,9 +10870,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.25.7":
-  version: 3.25.7
-  resolution: "zod@npm:3.25.7"
-  checksum: 10c0/9bf497ed9b810d30b84ae032ec7882435d0fb9c94db08427592f56b711227726cfb7551ee7ca9f99135dfaff1fcff5ce261e25a6400f62b651ec23880cb41013
+"zod@npm:^3.25.13":
+  version: 3.25.13
+  resolution: "zod@npm:3.25.13"
+  checksum: 10c0/04d7d0bb769fa80cc657300e5c64a563dd91a998a88ce2d604d6e9d911df2f71fdea5c6b253136750c70a257a06b85132bbd4a8d039263b37ff02c3d57560418
   languageName: node
   linkType: hard
