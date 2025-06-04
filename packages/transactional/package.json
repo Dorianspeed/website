@@ -26,13 +26,13 @@
     "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.5",
     "@vitejs/plugin-react": "^4.5.1",
-    "@vitest/coverage-v8": "^3.2.0",
+    "@vitest/coverage-v8": "^3.2.1",
     "@website/eslint-config": "*",
     "@website/typescript-config": "*",
     "eslint": "^9.28.0",
-    "happy-dom": "^17.6.1",
+    "happy-dom": "^17.6.3",
     "madge": "^8.0.0",
-    "react-email": "^4.0.15",
-    "vitest": "^3.2.0"
+    "react-email": "^4.0.16",
+    "vitest": "^3.2.1"
   }
 }
