@@ -30,7 +30,7 @@
     "@website/eslint-config": "*",
     "@website/typescript-config": "*",
     "eslint": "^9.28.0",
-    "happy-dom": "^17.6.3",
+    "happy-dom": "^18.0.1",
     "madge": "^8.0.0",
     "react-email": "^4.0.16",
     "vitest": "^3.2.3"
