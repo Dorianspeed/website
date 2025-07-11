@@ -3493,12 +3493,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^24.0.12":
-  version: 24.0.12
-  resolution: "@types/node@npm:24.0.12"
+"@types/node@npm:^24.0.13":
+  version: 24.0.13
+  resolution: "@types/node@npm:24.0.13"
   dependencies:
     undici-types: "npm:~7.8.0"
-  checksum: 10c0/333777c3416b758bbdb72a09e9db5599ff7789dca519d3fcf8150a1c56c79d808e0009e92d52016e80033b3c52724def08aad2c5b396e28f00dbdfe40a1756a4
+  checksum: 10c0/e1f3d4ea8973b1f2f987814ac5343d05ad8b56bf7fa41755295dee0ce0f7b4e2de4f3daef5296429180228970cef0d70f2ad873c61dbafc6f5eeca9d023aba76
   languageName: node
   linkType: hard
 
@@ -3945,7 +3945,7 @@ __metadata:
     madge: "npm:^8.0.0"
     react: "npm:^19.1.0"
     react-dom: "npm:^19.1.0"
-    react-email: "npm:^4.1.0"
+    react-email: "npm:^4.1.1"
     vitest: "npm:^3.2.4"
   languageName: unknown
   linkType: soft
@@ -9027,9 +9027,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-email@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "react-email@npm:4.1.0"
+"react-email@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "react-email@npm:4.1.1"
   dependencies:
     "@babel/parser": "npm:^7.27.0"
     "@babel/traverse": "npm:^7.27.0"
@@ -9050,7 +9050,7 @@ __metadata:
     tsconfig-paths: "npm:4.2.0"
   bin:
     email: dist/index.js
-  checksum: 10c0/ac0f081a99e1132efdf6591bba06ecb73fe0de74c6c904232c66b39acd36c18b9ac81600dbd22584ecf6b01aa90632e6fb050ad4f0eef108fe2c9a7d218b096f
+  checksum: 10c0/f476afdb4aa854d3320b4b009659d484621884f36de0671741fd9c45c7381cefc551a19be67538ade4702d0f32b5b393cf53bb53f2326fe104bda7c700d18d4b
   languageName: node
   linkType: hard
 
@@ -11018,7 +11018,7 @@ __metadata:
     vite-plugin-svgr: "npm:^4.3.0"
     vite-tsconfig-paths: "npm:^5.1.4"
     vitest: "npm:^3.2.4"
-    zod: "npm:^4.0.2"
+    zod: "npm:^4.0.5"
   languageName: unknown
   linkType: soft
 
@@ -11029,7 +11029,7 @@ __metadata:
     "@commitlint/cli": "npm:^19.8.1"
     "@commitlint/config-conventional": "npm:^19.8.1"
     "@trivago/prettier-plugin-sort-imports": "npm:^5.2.2"
-    "@types/node": "npm:^24.0.12"
+    "@types/node": "npm:^24.0.13"
     husky: "npm:^9.1.7"
     knip: "npm:^5.61.3"
     lint-staged: "npm:^16.1.2"
@@ -11301,9 +11301,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^4.0.2":
-  version: 4.0.2
-  resolution: "zod@npm:4.0.2"
-  checksum: 10c0/31d82196d5be1c8290a860e79b469c64934979a95533d6c7802cb164562a1584d03bc19fa349747f7c54e45fa85c10b2f731a2805626f96f8908bc94bccd38b8
+"zod@npm:^4.0.5":
+  version: 4.0.5
+  resolution: "zod@npm:4.0.5"
+  checksum: 10c0/59449d731ca63849b6bcb14300aa6e2f042d440b3ed294b45c248519aec78780f85a5d1939a62c2ce82e9dc60afca77c8005e0a98d7517b0c2586d6c76940424
   languageName: node
   linkType: hard
