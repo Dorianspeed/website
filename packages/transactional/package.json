@@ -14,7 +14,7 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@react-email/components": "^0.3.1",
+    "@react-email/components": "^0.3.2",
     "html-react-parser": "^5.2.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
@@ -32,7 +32,7 @@
     "eslint": "^9.31.0",
     "happy-dom": "^18.0.1",
     "madge": "^8.0.0",
-    "react-email": "^4.2.3",
+    "react-email": "^4.2.4",
     "vitest": "^3.2.4"
   }
 }
