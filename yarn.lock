@@ -8327,10 +8327,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nodemailer@npm:^7.0.5":
-  version: 7.0.5
-  resolution: "nodemailer@npm:7.0.5"
-  checksum: 10c0/8fcd417a5dc6cdde4193c3f27c8ae07f6998527578c1e70adfa5f2f00121471fcaa14abbf26b2a8c513ac8505c956f437aa2c2a693606eb0e8c68bc712698fa7
+"nodemailer@npm:^7.0.11":
+  version: 7.0.11
+  resolution: "nodemailer@npm:7.0.11"
+  checksum: 10c0/208f108fdb4c5dd0e3a2f013578d53dad505cf1b9c7a084f6d22fc9d6f3912daafb4a23793ca568ff848afc35f15f4eb24382d3f6f9fb8ede4a8410d4ca63618
   languageName: node
   linkType: hard
 
@@ -11119,7 +11119,7 @@ __metadata:
     happy-dom: "npm:^18.0.1"
     madge: "npm:^8.0.0"
     next: "npm:^15.4.6"
-    nodemailer: "npm:^7.0.5"
+    nodemailer: "npm:^7.0.11"
     postcss: "npm:^8.5.6"
     react: "npm:^19.1.1"
     react-dom: "npm:^19.1.1"
